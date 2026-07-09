@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>권지훈 목사 | 다음세대 사역과 교회 운영</title>
+    <meta
+      name="description"
+      content="권지훈 목사의 다음세대 사역, 목회철학, 주요 은사와 설교·예배 인도 경험을 정리한 소개 페이지입니다."
+    >
+    <meta property="og:title" content="권지훈 목사 | 다음세대 사역과 교회 운영">
+    <meta
+      property="og:description"
+      content="말씀, 다음세대, 교회 운영 시스템을 연결하여 건강하고 지속 가능한 사역을 세워가는 목회."
+    >
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/ministry-hero.png">
+    <style>
+      :root {
+        --ink: #17212b;
+        --muted: #52616f;
+        --line: #d7e1df;
+        --paper: #f8faf8;
+        --surface: #ffffff;
+        --sage: #2f6f68;
+        --sage-deep: #184c48;
+        --copper: #a8653a;
+        --gold: #d7a84f;
+        --shadow: 0 24px 70px rgba(20, 32, 43, 0.14);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--paper);
+        font-family:
+          "Pretendard",
+          "Apple SD Gothic Neo",
+          "Malgun Gothic",
+          "Noto Sans KR",
+          system-ui,
+          sans-serif;
+        line-height: 1.72;
+        overflow-x: hidden;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .hero {
+        position: relative;
+        display: grid;
+        min-height: min(720px, 78vh);
+        padding: 28px clamp(20px, 4vw, 64px) 72px;
+        color: #fff;
+        overflow: hidden;
+        isolation: isolate;
+      }
+
+      .hero::before {
+        position: absolute;
+        inset: 0;
+        z-index: -2;
+        content: "";
+        background:
+          linear-gradient(90deg, rgba(16, 30, 36, 0.88), rgba(16, 30, 36, 0.52) 48%, rgba(16, 30, 36, 0.2)),
+          url("assets/ministry-hero.png") center / cover;
+      }
+
+      .hero::after {
+        position: absolute;
+        inset: auto 0 0;
+        z-index: -1;
+        height: 26%;
+        content: "";
+        background: linear-gradient(180deg, rgba(248, 250, 248, 0), var(--paper));
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        width: min(1120px, 100%);
+        margin: 0 auto;
+      }
+
+      .brand {
+        font-size: 0.96rem;
+        font-weight: 800;
+        letter-spacing: 0;
+      }
+
+      .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 10px 18px;
+        color: rgba(255, 255, 255, 0.82);
+        font-size: 0.9rem;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+      }
+
+      .hero-content {
+        align-self: center;
+        width: min(1120px, 100%);
+        margin: 0 auto;
+        padding-top: 70px;
+      }
+
+      .eyebrow {
+        margin: 0 0 18px;
+        color: #f2d393;
+        font-size: 0.93rem;
+        font-weight: 800;
+      }
+
+      h1 {
+        max-width: 720px;
+        margin: 0;
+        font-size: clamp(3rem, 7vw, 6.8rem);
+        line-height: 0.98;
+        letter-spacing: 0;
+      }
+
+      .hero-lead {
+        max-width: 720px;
+        margin: 24px 0 0;
+        color: rgba(255, 255, 255, 0.92);
+        font-size: clamp(1.06rem, 2vw, 1.32rem);
+        word-break: keep-all;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 34px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 46px;
+        padding: 10px 18px;
+        border: 1px solid rgba(255, 255, 255, 0.42);
+        border-radius: 8px;
+        color: #fff;
+        font-size: 0.96rem;
+        font-weight: 800;
+        text-decoration: none;
+      }
+
+      .button.primary {
+        border-color: #f0c979;
+        color: #10212a;
+        background: #f0c979;
+      }
+
+      main {
+        margin-top: -38px;
+      }
+
+      .section {
+        padding: 74px clamp(20px, 4vw, 64px);
+      }
+
+      .section.alt {
+        background: #eef5f2;
+      }
+
+      .wrap {
+        width: min(1120px, 100%);
+        margin: 0 auto;
+      }
+
+      .intro-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 0.82fr) minmax(300px, 1.18fr);
+        gap: clamp(28px, 5vw, 70px);
+        align-items: start;
+      }
+
+      .section-label {
+        margin: 0 0 12px;
+        color: var(--copper);
+        font-size: 0.88rem;
+        font-weight: 900;
+      }
+
+      h2 {
+        margin: 0;
+        font-size: clamp(2rem, 4vw, 3.4rem);
+        line-height: 1.12;
+        letter-spacing: 0;
+        word-break: keep-all;
+      }
+
+      h3 {
+        margin: 0 0 16px;
+        font-size: clamp(1.34rem, 2.4vw, 1.86rem);
+        line-height: 1.24;
+        letter-spacing: 0;
+      }
+
+      .body-copy {
+        display: grid;
+        gap: 18px;
+        color: #263540;
+        font-size: 1.04rem;
+        word-break: keep-all;
+      }
+
+      .body-copy p {
+        margin: 0;
+      }
+
+      .quote-band {
+        margin-top: 34px;
+        padding: 24px 0 0;
+        border-top: 1px solid var(--line);
+        color: var(--sage-deep);
+        font-size: clamp(1.18rem, 2.2vw, 1.5rem);
+        font-weight: 800;
+        line-height: 1.48;
+        word-break: keep-all;
+      }
+
+      .philosophy {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .principle {
+        min-height: 280px;
+        padding: 28px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--surface);
+        box-shadow: 0 18px 48px rgba(30, 58, 64, 0.08);
+      }
+
+      .principle-number {
+        display: inline-grid;
+        width: 36px;
+        height: 36px;
+        margin-bottom: 24px;
+        place-items: center;
+        border-radius: 50%;
+        color: #fff;
+        background: var(--sage);
+        font-weight: 900;
+      }
+
+      .principle p {
+        margin: 0;
+        color: var(--muted);
+        word-break: keep-all;
+      }
+
+      .experience-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 18px;
+        margin-top: 34px;
+      }
+
+      .list-card {
+        padding: 30px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--surface);
+        box-shadow: var(--shadow);
+      }
+
+      .list-card ul {
+        display: grid;
+        gap: 13px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .list-card li {
+        position: relative;
+        padding-left: 24px;
+        color: #283944;
+        word-break: keep-all;
+      }
+
+      .list-card li::before {
+        position: absolute;
+        top: 0.72em;
+        left: 0;
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        content: "";
+        background: var(--gold);
+      }
+
+      .closing {
+        color: #fff;
+        background: var(--sage-deep);
+      }
+
+      .closing .wrap {
+        display: grid;
+        grid-template-columns: minmax(0, 0.7fr) minmax(300px, 1.3fr);
+        gap: clamp(28px, 5vw, 70px);
+        align-items: center;
+      }
+
+      .closing p {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.86);
+        font-size: clamp(1.12rem, 2vw, 1.34rem);
+        line-height: 1.65;
+        word-break: keep-all;
+      }
+
+      footer {
+        padding: 28px clamp(20px, 4vw, 64px);
+        color: var(--muted);
+        background: #ffffff;
+        font-size: 0.9rem;
+      }
+
+      footer .wrap {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+      }
+
+      @media (max-width: 840px) {
+        .hero {
+          min-height: 670px;
+          padding-bottom: 64px;
+        }
+
+        .nav {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        .nav-links {
+          justify-content: flex-start;
+        }
+
+        .hero-content {
+          padding-top: 48px;
+        }
+
+        .intro-grid,
+        .philosophy,
+        .experience-grid,
+        .closing .wrap {
+          grid-template-columns: 1fr;
+        }
+
+        .section {
+          padding-top: 58px;
+          padding-bottom: 58px;
+        }
+
+        .principle {
+          min-height: auto;
+        }
+
+        footer .wrap {
+          flex-direction: column;
+        }
+      }
+
+      @media (max-width: 520px) {
+        .hero {
+          min-height: 640px;
+        }
+
+        h1,
+        h2,
+        h3,
+        .hero-lead,
+        .body-copy,
+        .quote-band,
+        .principle p,
+        .list-card li,
+        .closing p {
+          overflow-wrap: anywhere;
+          word-break: normal;
+        }
+
+        h1 {
+          font-size: clamp(2.72rem, 14vw, 3.35rem);
+        }
+
+        h2 {
+          font-size: clamp(1.82rem, 9vw, 2.1rem);
+        }
+
+        .nav-links {
+          gap: 8px 12px;
+          font-size: 0.84rem;
+        }
+
+        .button {
+          width: 100%;
+        }
+
+        .list-card,
+        .principle {
+          padding: 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav" aria-label="주요 섹션">
+        <div class="brand">권지훈 목사</div>
+        <div class="nav-links">
+          <a href="#intro">소개</a>
+          <a href="#philosophy">목회철학</a>
+          <a href="#strengths">은사와 경험</a>
+        </div>
+      </nav>
+
+      <div class="hero-content">
+        <p class="eyebrow">다음세대 사역 · 예배 인도 · 교회 운영 구조화</p>
+        <h1>권지훈 목사</h1>
+        <p class="hero-lead">
+          말씀, 다음세대, 교회 운영 시스템을 연결하여 건강하고 지속 가능한 사역을 세워가는 목회를 지향합니다.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#intro">소개 보기</a>
+          <a class="button" href="#philosophy">목회철학 보기</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section" id="intro">
+        <div class="wrap intro-grid">
+          <div>
+            <p class="section-label">짧은 소개문</p>
+            <h2>다음세대 사역과 반복 행정 실무를 함께 감당해 온 목회자</h2>
+            <div class="quote-band">
+              사람이 행정에 소모되지 않고, 영혼을 더 깊이 살피는 구조를 세우고 싶습니다.
+            </div>
+          </div>
+          <div class="body-copy">
+            <p>
+              권지훈 목사는 아동부와 청소년부 다음세대 사역을 중심으로 설교, 예배 진행, 2부 순서,
+              새친구 정착, 교사 회의, 절기 사역을 감당해 왔으며, 동시에 주보·예배 보고·예배 자료·회의
+              자료·일정 확인 등 교회 전반의 반복 행정 실무를 꾸준히 감당해 왔습니다.
+            </p>
+            <p>
+              아이들과 청소년들이 말씀을 어렵고 먼 이야기로만 듣지 않고 자기 삶 안에서 붙잡을 수 있도록,
+              설교와 예배 후 활동, 2부 순서, 절기 프로그램이 하나의 흐름으로 이어지게 기획하고
+              진행해 왔습니다.
+            </p>
+            <p>
+              또한 새벽기도, 수요예배, 금요철야예배 등 장년 예배에서 설교 대타와 예배 인도를 맡아 온
+              경험이 있으며, 청년 시절부터 이어온 찬양팀 사역을 바탕으로 금요철야예배 찬양인도도 꾸준히
+              감당해 왔습니다.
+            </p>
+            <p>
+              사역 현장에서는 주보 준비, 예배 보고서 작성, 설교 녹취·요약 정리, 예배 자료와 찬양 자료
+              관리, 부서 일정과 후속 연락 정리처럼 반복되지만 놓치면 사역 흐름이 흔들리는 행정 업무를
+              꾸준히 감당해 왔습니다.
+            </p>
+            <p>
+              최근에는 이러한 교회 행정 흐름을 더 체계화하고, 필요한 영역에는 AI와 자동화 도구를 활용하여
+              목회자와 교사가 행정에 소모되기보다 성도와 다음세대를 더 깊이 살피는 구조를 세우는 데
+              관심을 가지고 있습니다.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" id="philosophy">
+        <div class="wrap">
+          <p class="section-label">목회철학</p>
+          <h2>말씀의 본질을 지키며, 사람의 삶 가까이로 연결하는 사역</h2>
+          <div class="philosophy" aria-label="목회철학 세 가지">
+            <article class="principle">
+              <span class="principle-number">1</span>
+              <h3>살아 있는 말씀</h3>
+              <p>
+                말씀은 단순한 지식 전달이 아니라, 하나님께서 자기 백성에게 음성을 들려주시고, 각자의 삶
+                가운데 베푸신 은혜와 인도하심을 깨닫게 하시는 살아 있는 말씀이라고 믿습니다.
+              </p>
+            </article>
+            <article class="principle">
+              <span class="principle-number">2</span>
+              <h3>눈높이와 본질</h3>
+              <p>
+                설교와 교육은 듣는 사람의 눈높이에서 시작하되, 말씀의 본질은 가볍게 만들지 않는 방향을
+                중요하게 생각합니다.
+              </p>
+            </article>
+            <article class="principle">
+              <span class="principle-number">3</span>
+              <h3>연결되는 돌봄</h3>
+              <p>
+                예배, 설교, 활동, 교사 돌봄, 새친구 정착이 따로 움직이지 않고 하나의 흐름으로 연결되도록
+                사역을 설계하고자 합니다.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="strengths">
+        <div class="wrap">
+          <p class="section-label">주요 은사와 경험</p>
+          <h2>설교와 교육 설계, 예배 인도, 반복 행정 구조화</h2>
+          <div class="experience-grid">
+            <article class="list-card">
+              <h3>주요 은사와 강점</h3>
+              <ul>
+                <li>아동부·청소년부 다음세대 사역 기획과 진행</li>
+                <li>설교 내용을 활동, PPT, 2부 순서로 연결하는 교육 설계</li>
+                <li>예배 보고서, 주보, 일정, 반복 행정 업무의 구조화</li>
+                <li>자동화 도구를 활용한 교회 사무 효율화</li>
+              </ul>
+            </article>
+            <article class="list-card">
+              <h3>설교·예배 인도 경험</h3>
+              <ul>
+                <li>아동부·청소년부 설교 및 예배 진행</li>
+                <li>새벽기도, 수요예배, 금요철야예배 등 장년 예배 설교 대타 경험</li>
+                <li>주일저녁예배 인도문 작성 및 예배 흐름 준비</li>
+                <li>청년 시절부터 찬양팀 및 예배 찬양인도 경험</li>
+                <li>금요철야 찬양인도와 찬양팀 사역 경험</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section closing">
+        <div class="wrap">
+          <div>
+            <p class="section-label">앞으로의 방향</p>
+            <h2>건강하고 지속 가능한 사역을 향하여</h2>
+          </div>
+          <p>
+            앞으로도 말씀, 다음세대, 교회 운영 시스템을 연결하여 건강하고 지속 가능한 사역을 세워가는
+            목회를 하고자 합니다.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <span>권지훈 목사 소개 페이지</span>
+        <span>Next Generation Ministry · Worship · Church Operations</span>
+      </div>
+    </footer>
+  </body>
+</html>

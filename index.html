@@ -481,50 +481,24 @@
 
       .system-lane {
         display: grid;
-        grid-template-columns: 170px repeat(3, minmax(0, 1fr));
-        gap: 24px;
-        padding: 28px 0;
+        grid-template-columns: minmax(220px, 0.4fr) minmax(0, 1fr);
+        gap: 42px;
+        padding: 30px 0;
         align-items: center;
         border-bottom: 1px solid var(--line);
       }
 
       .system-lane h3 {
         margin: 0;
-        font-size: 1.12rem;
+        font-size: 1.18rem;
       }
 
-      .lane-step {
-        position: relative;
-        min-width: 0;
-        padding-right: 34px;
-      }
-
-      .lane-step strong,
-      .lane-step span {
-        display: block;
-      }
-
-      .lane-step strong {
-        margin-bottom: 4px;
-        color: var(--forest);
-        font-size: 0.78rem;
-      }
-
-      .lane-step span {
+      .system-lane p {
+        max-width: 790px;
+        margin: 0;
         color: #34444b;
-        font-size: 0.9rem;
-        line-height: 1.5;
-      }
-
-      .lane-step:not(:last-child)::after {
-        position: absolute;
-        top: 50%;
-        right: 7px;
-        content: "→";
-        color: var(--mustard);
-        font-size: 1.15rem;
-        font-weight: 900;
-        transform: translateY(-50%);
+        font-size: 1rem;
+        line-height: 1.75;
       }
 
       .portfolio-list {
@@ -1144,26 +1118,12 @@
 
         .system-lane {
           grid-template-columns: 1fr;
-          gap: 0;
+          gap: 10px;
           padding: 24px 0;
         }
 
         .system-lane h3 {
-          padding-bottom: 14px;
-        }
-
-        .lane-step {
-          padding: 14px 0 34px;
-          border-top: 1px solid var(--line);
-        }
-
-        .lane-step:not(:last-child)::after {
-          top: auto;
-          right: auto;
-          bottom: 5px;
-          left: 0;
-          content: "↓";
-          transform: none;
+          padding-bottom: 0;
         }
 
         .portfolio-item {
@@ -1449,28 +1409,20 @@
 
           <div class="system-lanes">
             <article class="system-lane">
-              <h3>말씀 사역</h3>
-              <div class="lane-step"><strong>현장</strong><span>설교 원고와 녹취</span></div>
-              <div class="lane-step"><strong>자료화</strong><span>본문·날짜·주제별 정리</span></div>
-              <div class="lane-step"><strong>다시 사용</strong><span>이전 설교·예화·핵심 문장 검색</span></div>
+              <h3>말씀 사역 현장에서</h3>
+              <p>설교 원고와 녹취를 본문·날짜·주제별로 모아, 이전 설교와 예화, 핵심 문장을 다시 찾을 수 있는 말씀 자료 체계를 만들었습니다.</p>
             </article>
             <article class="system-lane">
-              <h3>다음세대</h3>
-              <div class="lane-step"><strong>현장</strong><span>PPT·활동지·운영 기록</span></div>
-              <div class="lane-step"><strong>자료화</strong><span>연령·주차·말씀별 묶음</span></div>
-              <div class="lane-step"><strong>다시 사용</strong><span>2부 활동과 후속 대화 준비</span></div>
+              <h3>다음세대 사역에서</h3>
+              <p>PPT와 활동지, 2부 활동과 운영 기록을 연령·주차·말씀별로 묶어, 다음 활동과 후속 대화를 함께 준비했습니다.</p>
             </article>
             <article class="system-lane">
-              <h3>예배·찬양</h3>
-              <div class="lane-step"><strong>현장</strong><span>선곡·콘티·가사·예배 자료</span></div>
-              <div class="lane-step"><strong>자료화</strong><span>곡·본문·인도 날짜별 기록</span></div>
-              <div class="lane-step"><strong>다시 사용</strong><span>이전 선곡과 예배 흐름 준비</span></div>
+              <h3>예배·찬양 사역에서</h3>
+              <p>선곡과 콘티, 가사와 예배 자료를 곡·본문·인도 날짜별로 기록해, 이전 예배의 흐름을 살펴 다음 선곡을 준비했습니다.</p>
             </article>
             <article class="system-lane">
-              <h3>반복 행정</h3>
-              <div class="lane-step"><strong>현장</strong><span>주보·보고서·일정·후속 연락</span></div>
-              <div class="lane-step"><strong>자료화</strong><span>템플릿·체크 항목·자동화</span></div>
-              <div class="lane-step"><strong>다시 사용</strong><span>누락 확인과 다음 일정 관리</span></div>
+              <h3>행정 사역 현장에서</h3>
+              <p>주보와 보고서, 일정과 후속 연락을 템플릿·체크 항목·자동화로 연결해, 누락을 찾고 다음 일정을 이어 관리했습니다.</p>
             </article>
           </div>
         </div>

@@ -3,30 +3,33 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>권지훈 목사 | 다음세대 사역과 예배 인도</title>
+    <title>권지훈 목사 | 말씀과 다음세대를 잇는 목회</title>
     <meta
       name="description"
-      content="권지훈 목사의 다음세대 사역, 목회철학, 주요 은사와 설교·예배 인도 경험을 정리한 소개 페이지입니다."
+      content="말씀을 삶으로 이어 다음세대 한 사람을 세워가는 권지훈 목사의 신앙 이야기, 목회철학, 사역 경력과 포트폴리오입니다."
     >
-    <meta property="og:title" content="권지훈 목사 | 다음세대 사역과 예배 인도">
+    <meta property="og:title" content="권지훈 목사 | 말씀과 다음세대를 잇는 목회">
     <meta
       property="og:description"
-      content="말씀과 예배의 본질을 지키며, 다음세대를 세우고 사역 현장을 체계적으로 지원하는 목회."
+      content="설교와 시각자료, 2부 활동과 후속 돌봄을 하나의 흐름으로 이어가는 다음세대 목회."
     >
     <meta property="og:type" content="website">
     <meta property="og:image" content="assets/ministry-hero.png">
     <style>
       :root {
-        --ink: #17212b;
-        --muted: #52616f;
-        --line: #d7e1df;
-        --paper: #f8faf8;
+        --ink: #17242b;
+        --muted: #596871;
+        --line: #d7dfdc;
+        --paper: #fbfbf8;
         --surface: #ffffff;
-        --sage: #2f6f68;
-        --sage-deep: #184c48;
-        --copper: #a8653a;
-        --gold: #d7a84f;
-        --shadow: 0 24px 70px rgba(20, 32, 43, 0.14);
+        --forest: #1d5137;
+        --forest-deep: #123525;
+        --teal: #2f736a;
+        --coral: #d7653d;
+        --mustard: #e2aa42;
+        --violet: #775c9d;
+        --mist: #eef5f2;
+        --shadow: 0 22px 54px rgba(27, 43, 48, 0.12);
       }
 
       * {
@@ -35,6 +38,7 @@
 
       html {
         scroll-behavior: smooth;
+        scroll-padding-top: 28px;
       }
 
       body {
@@ -48,99 +52,152 @@
           "Noto Sans KR",
           system-ui,
           sans-serif;
-        line-height: 1.72;
+        font-size: 1rem;
+        line-height: 1.75;
         overflow-x: hidden;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
       }
 
       a {
         color: inherit;
       }
 
+      .skip-link {
+        position: fixed;
+        top: 12px;
+        left: 12px;
+        z-index: 20;
+        padding: 9px 13px;
+        border-radius: 6px;
+        color: #fff;
+        background: var(--forest-deep);
+        transform: translateY(-160%);
+      }
+
+      .skip-link:focus {
+        transform: translateY(0);
+      }
+
       .hero {
         position: relative;
-        display: grid;
-        min-height: min(720px, 78vh);
-        padding: 28px clamp(20px, 4vw, 64px) 72px;
+        display: flex;
+        min-height: min(700px, 80svh);
+        padding: 28px 4vw 60px;
         color: #fff;
-        overflow: hidden;
+        background: url("assets/ministry-hero.png") center 42% / cover no-repeat;
         isolation: isolate;
       }
 
       .hero::before {
         position: absolute;
         inset: 0;
-        z-index: -2;
+        z-index: -1;
         content: "";
-        background:
-          linear-gradient(90deg, rgba(16, 30, 36, 0.88), rgba(16, 30, 36, 0.52) 48%, rgba(16, 30, 36, 0.2)),
-          url("assets/ministry-hero.png") center / cover;
+        background: rgba(10, 29, 27, 0.68);
       }
 
-      .hero::after {
-        position: absolute;
-        inset: auto 0 0;
-        z-index: -1;
-        height: 26%;
-        content: "";
-        background: linear-gradient(180deg, rgba(248, 250, 248, 0), var(--paper));
+      .hero-inner {
+        display: flex;
+        width: min(1180px, 100%);
+        margin: 0 auto;
+        flex-direction: column;
       }
 
       .nav {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 20px;
-        width: min(1120px, 100%);
-        margin: 0 auto;
+        gap: 22px;
       }
 
       .brand {
-        font-size: 0.96rem;
-        font-weight: 800;
+        flex: 0 0 auto;
+        font-size: 1rem;
+        font-weight: 900;
         letter-spacing: 0;
       }
 
       .nav-links {
         display: flex;
-        flex-wrap: wrap;
+        align-items: center;
         justify-content: flex-end;
-        gap: 10px 18px;
+        gap: 8px 20px;
         color: rgba(255, 255, 255, 0.82);
-        font-size: 0.9rem;
+        font-size: 0.88rem;
       }
 
       .nav-links a {
         text-decoration: none;
+        white-space: nowrap;
+      }
+
+      .nav-links a:hover,
+      .nav-links a:focus-visible {
+        color: #fff;
       }
 
       .hero-content {
-        align-self: center;
-        width: min(1120px, 100%);
-        margin: 0 auto;
-        padding-top: 70px;
+        display: flex;
+        max-width: 820px;
+        margin: auto 0;
+        padding: 76px 0 48px;
+        flex-direction: column;
+        align-items: flex-start;
       }
 
-      .eyebrow {
-        margin: 0 0 18px;
-        color: #f2d393;
-        font-size: 0.93rem;
-        font-weight: 800;
+      .eyebrow,
+      .section-label,
+      .project-label,
+      .tool-label {
+        margin: 0 0 13px;
+        color: var(--coral);
+        font-size: 0.84rem;
+        font-weight: 900;
+        letter-spacing: 0;
+      }
+
+      .hero .eyebrow {
+        color: #f4c966;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        word-break: keep-all;
       }
 
       h1 {
-        max-width: 720px;
         margin: 0;
-        font-size: clamp(3rem, 7vw, 6.8rem);
+        font-size: 5.6rem;
         line-height: 0.98;
         letter-spacing: 0;
       }
 
+      h2 {
+        margin: 0;
+        font-size: 3.1rem;
+        line-height: 1.14;
+        letter-spacing: 0;
+      }
+
+      h3 {
+        margin: 0;
+        font-size: 1.65rem;
+        line-height: 1.28;
+        letter-spacing: 0;
+      }
+
       .hero-lead {
-        max-width: 720px;
-        margin: 24px 0 0;
+        max-width: 760px;
+        margin: 26px 0 0;
         color: rgba(255, 255, 255, 0.92);
-        font-size: clamp(1.06rem, 2vw, 1.32rem);
-        word-break: keep-all;
+        font-size: 1.3rem;
+        line-height: 1.65;
       }
 
       .hero-actions {
@@ -152,204 +209,651 @@
 
       .button {
         display: inline-flex;
-        align-items: center;
-        justify-content: center;
         min-height: 46px;
         padding: 10px 18px;
-        border: 1px solid rgba(255, 255, 255, 0.42);
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(255, 255, 255, 0.46);
         border-radius: 8px;
         color: #fff;
-        font-size: 0.96rem;
-        font-weight: 800;
+        font-size: 0.94rem;
+        font-weight: 900;
         text-decoration: none;
       }
 
       .button.primary {
-        border-color: #f0c979;
-        color: #10212a;
-        background: #f0c979;
-      }
-
-      main {
-        margin-top: -38px;
+        border-color: #f2c55d;
+        color: #17242b;
+        background: #f2c55d;
       }
 
       .section {
-        padding: 74px clamp(20px, 4vw, 64px);
+        padding: 88px 4vw;
       }
 
       .section.alt {
-        background: #eef5f2;
+        background: var(--mist);
       }
 
       .wrap {
-        width: min(1120px, 100%);
+        width: min(1180px, 100%);
         margin: 0 auto;
       }
 
-      .intro-grid {
+      .section-head {
         display: grid;
-        grid-template-columns: minmax(0, 0.82fr) minmax(300px, 1.18fr);
-        gap: clamp(28px, 5vw, 70px);
+        grid-template-columns: minmax(280px, 0.82fr) minmax(360px, 1.18fr);
+        gap: 42px 72px;
+        align-items: end;
+      }
+
+      .section-intro {
+        margin: 0;
+        color: var(--muted);
+        font-size: 1.07rem;
+      }
+
+      .story-grid {
+        display: grid;
+        grid-template-columns: minmax(280px, 0.82fr) minmax(360px, 1.18fr);
+        gap: 44px 74px;
         align-items: start;
       }
 
-      .section-label {
-        margin: 0 0 12px;
-        color: var(--copper);
-        font-size: 0.88rem;
+      .story-note {
+        margin-top: 34px;
+        padding: 24px 0 0 22px;
+        border-top: 1px solid var(--line);
+        border-left: 4px solid var(--mustard);
+        color: var(--forest);
+        font-size: 1.22rem;
         font-weight: 900;
-      }
-
-      h2 {
-        margin: 0;
-        font-size: clamp(2rem, 4vw, 3.4rem);
-        line-height: 1.12;
-        letter-spacing: 0;
-        word-break: keep-all;
-      }
-
-      h3 {
-        margin: 0 0 16px;
-        font-size: clamp(1.34rem, 2.4vw, 1.86rem);
-        line-height: 1.24;
-        letter-spacing: 0;
+        line-height: 1.55;
       }
 
       .body-copy {
         display: grid;
-        gap: 18px;
-        color: #263540;
-        font-size: 1.04rem;
-        word-break: keep-all;
+        gap: 20px;
+        color: #2b3941;
+        font-size: 1.06rem;
       }
 
       .body-copy p {
         margin: 0;
       }
 
-      .quote-band {
-        margin-top: 34px;
-        padding: 24px 0 0;
-        border-top: 1px solid var(--line);
-        color: var(--sage-deep);
-        font-size: clamp(1.18rem, 2.2vw, 1.5rem);
-        font-weight: 800;
-        line-height: 1.48;
-        word-break: keep-all;
-      }
-
-      .philosophy {
+      .philosophy-grid {
         display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 16px;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 24px;
+        margin-top: 48px;
       }
 
       .principle {
-        min-height: 280px;
-        padding: 28px;
-        border: 1px solid var(--line);
-        border-radius: 8px;
-        background: var(--surface);
-        box-shadow: 0 18px 48px rgba(30, 58, 64, 0.08);
+        padding-top: 23px;
+        border-top: 4px solid var(--forest);
+      }
+
+      .principle:nth-child(2) {
+        border-top-color: var(--coral);
+      }
+
+      .principle:nth-child(3) {
+        border-top-color: var(--mustard);
+      }
+
+      .principle:nth-child(4) {
+        border-top-color: var(--violet);
       }
 
       .principle-number {
-        display: inline-grid;
-        width: 36px;
-        height: 36px;
-        margin-bottom: 24px;
-        place-items: center;
-        border-radius: 50%;
-        color: #fff;
-        background: var(--sage);
+        display: block;
+        margin-bottom: 20px;
+        color: var(--teal);
+        font-size: 0.84rem;
         font-weight: 900;
+      }
+
+      .principle h3 {
+        margin-bottom: 15px;
+        font-size: 1.35rem;
       }
 
       .principle p {
         margin: 0;
         color: var(--muted);
-        word-break: keep-all;
       }
 
-      .experience-grid {
+      .evidence-note {
+        margin: 22px 0 0;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      .metrics {
         display: grid;
-        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-        gap: 18px;
-        margin-top: 34px;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        margin-top: 44px;
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
       }
 
-      .list-card {
-        padding: 30px;
-        border: 1px solid var(--line);
-        border-radius: 8px;
-        background: var(--surface);
-        box-shadow: var(--shadow);
+      .metric {
+        min-height: 175px;
+        padding: 28px;
+        border-left: 1px solid var(--line);
       }
 
-      .list-card ul {
+      .metric:first-child {
+        border-left: 0;
+      }
+
+      .metric strong,
+      .metric span {
+        display: block;
+      }
+
+      .metric strong {
+        margin: 12px 0 8px;
+        color: var(--forest);
+        font-size: 2.15rem;
+        line-height: 1.15;
+      }
+
+      .metric span {
+        color: var(--muted);
+        font-size: 0.94rem;
+      }
+
+      .metric-name {
+        color: var(--ink);
+        font-size: 0.86rem;
+        font-weight: 900;
+      }
+
+      .career-groups {
         display: grid;
-        gap: 13px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 40px 66px;
+        margin-top: 48px;
+      }
+
+      .career-group {
+        padding-top: 22px;
+        border-top: 1px solid var(--line);
+      }
+
+      .career-group h3 {
+        margin-bottom: 17px;
+      }
+
+      .clean-list {
+        display: grid;
+        gap: 11px;
         margin: 0;
         padding: 0;
         list-style: none;
       }
 
-      .list-card li {
+      .clean-list li {
         position: relative;
-        padding-left: 24px;
-        color: #283944;
-        word-break: keep-all;
+        padding-left: 20px;
+        color: #33434c;
       }
 
-      .list-card li::before {
+      .clean-list li::before {
         position: absolute;
-        top: 0.72em;
+        top: 0.76em;
         left: 0;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        content: "";
+        background: var(--mustard);
+      }
+
+      .portfolio-list {
+        margin-top: 36px;
+      }
+
+      .portfolio-item {
+        display: grid;
+        grid-template-columns: minmax(0, 1.12fr) minmax(320px, 0.88fr);
+        gap: 46px 68px;
+        padding: 58px 0;
+        align-items: center;
+        border-top: 1px solid var(--line);
+      }
+
+      .portfolio-item:last-child {
+        padding-bottom: 0;
+      }
+
+      .portfolio-item.text-first {
+        grid-template-columns: minmax(320px, 0.88fr) minmax(0, 1.12fr);
+      }
+
+      .project-copy h3 {
+        margin-bottom: 18px;
+        font-size: 2rem;
+      }
+
+      .project-copy p {
+        margin: 0 0 20px;
+        color: var(--muted);
+        font-size: 1.03rem;
+      }
+
+      .project-facts {
+        display: grid;
+        gap: 0;
+        margin: 0;
+      }
+
+      .project-facts div {
+        display: grid;
+        grid-template-columns: 90px minmax(0, 1fr);
+        gap: 16px;
+        padding: 12px 0;
+        border-top: 1px solid var(--line);
+      }
+
+      .project-facts dt {
+        color: var(--forest);
+        font-size: 0.86rem;
+        font-weight: 900;
+      }
+
+      .project-facts dd {
+        margin: 0;
+        color: #33434c;
+      }
+
+      .ppt-gallery {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .ppt-gallery figure,
+      .happiness-gallery figure {
+        margin: 0;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        overflow: hidden;
+        background: #fff;
+        box-shadow: var(--shadow);
+      }
+
+      .ppt-gallery figure:first-child {
+        grid-column: 1 / -1;
+      }
+
+      .ppt-gallery img {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+      }
+
+      .ppt-gallery figcaption,
+      .happiness-gallery figcaption {
+        padding: 8px 12px;
+        color: var(--muted);
+        font-size: 0.78rem;
+      }
+
+      .happiness-gallery {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        align-items: start;
+      }
+
+      .happiness-gallery img {
+        width: 100%;
+        aspect-ratio: 0.686;
+        object-fit: contain;
+        background: #eef2f3;
+      }
+
+      .worksheet {
+        min-height: 480px;
+        padding: 30px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fff;
+        box-shadow: var(--shadow);
+      }
+
+      .worksheet-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding-bottom: 20px;
+        border-bottom: 3px solid var(--ink);
+      }
+
+      .worksheet-top strong {
+        font-size: 1.42rem;
+      }
+
+      .worksheet-top span {
+        color: var(--teal);
+        font-size: 0.8rem;
+        font-weight: 900;
+      }
+
+      .worksheet-block {
+        margin-top: 26px;
+      }
+
+      .worksheet-block h4 {
+        margin: 0 0 12px;
+        font-size: 0.94rem;
+      }
+
+      .battery-scale {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 6px;
+      }
+
+      .battery-scale span {
+        height: 36px;
+        border: 1px solid var(--line);
+        background: #f2f5f4;
+      }
+
+      .battery-scale span:nth-child(1) {
+        background: #d9ebe6;
+      }
+
+      .battery-scale span:nth-child(2) {
+        background: #b9d8cf;
+      }
+
+      .worksheet-line {
+        height: 34px;
+        border-bottom: 1px dashed #99a6aa;
+      }
+
+      .message-box {
+        min-height: 92px;
+        padding: 18px;
+        border-left: 5px solid var(--mustard);
+        background: #f8f5e8;
+        color: var(--muted);
+      }
+
+      .care-flow {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        margin-top: 46px;
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .flow-step {
+        min-height: 150px;
+        padding: 24px 22px;
+        border-left: 1px solid var(--line);
+      }
+
+      .flow-step:first-child {
+        border-left: 0;
+      }
+
+      .flow-step strong,
+      .flow-step span {
+        display: block;
+      }
+
+      .flow-step strong {
+        margin-bottom: 10px;
+        color: var(--coral);
+        font-size: 0.8rem;
+      }
+
+      .flow-step span {
+        color: #304149;
+        font-weight: 800;
+        line-height: 1.55;
+      }
+
+      .care-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px;
+        margin-top: 48px;
+        align-items: stretch;
+      }
+
+      .sample-card,
+      .site-preview {
+        min-height: 500px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        overflow: hidden;
+        background: #fff;
+        box-shadow: var(--shadow);
+      }
+
+      .sample-card {
+        padding: 30px;
+      }
+
+      .sample-card h3 {
+        margin-bottom: 10px;
+      }
+
+      .sample-note {
+        margin: 0 0 24px;
+        color: var(--muted);
+        font-size: 0.88rem;
+      }
+
+      .sample-rows {
+        margin: 0;
+      }
+
+      .sample-rows div {
+        display: grid;
+        grid-template-columns: 108px minmax(0, 1fr);
+        gap: 18px;
+        padding: 13px 0;
+        border-top: 1px solid var(--line);
+      }
+
+      .sample-rows dt {
+        color: var(--forest);
+        font-size: 0.82rem;
+        font-weight: 900;
+      }
+
+      .sample-rows dd {
+        margin: 0;
+        color: #33434c;
+      }
+
+      .browser-bar {
+        display: flex;
+        height: 42px;
+        padding: 0 15px;
+        align-items: center;
+        gap: 7px;
+        border-bottom: 1px solid var(--line);
+        background: #f1f3f3;
+      }
+
+      .browser-bar span {
         width: 9px;
         height: 9px;
         border-radius: 50%;
-        content: "";
-        background: var(--gold);
+        background: #a4adaf;
+      }
+
+      .preview-visual {
+        height: 210px;
+        background: url("assets/ministry-hero.png") center 42% / cover no-repeat;
+      }
+
+      .preview-copy {
+        padding: 28px 30px 30px;
+      }
+
+      .preview-copy h3 {
+        margin-bottom: 10px;
+      }
+
+      .preview-copy > p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .preview-facts {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+        margin-top: 24px;
+      }
+
+      .preview-facts div {
+        min-height: 72px;
+        padding: 12px;
+        border-top: 3px solid var(--teal);
+        background: #f4f7f6;
+      }
+
+      .preview-facts strong,
+      .preview-facts span {
+        display: block;
+      }
+
+      .preview-facts strong {
+        margin-bottom: 4px;
+        font-size: 0.82rem;
+      }
+
+      .preview-facts span {
+        color: var(--muted);
+        font-size: 0.75rem;
+      }
+
+      .lessons-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 32px 56px;
+        margin-top: 46px;
+      }
+
+      .lesson {
+        padding-top: 22px;
+        border-top: 1px solid var(--line);
+      }
+
+      .lesson h3 {
+        margin-bottom: 12px;
+        font-size: 1.35rem;
+      }
+
+      .lesson p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .lesson-quote {
+        max-width: 920px;
+        margin: 54px 0 0;
+        padding-left: 22px;
+        border-left: 5px solid var(--mustard);
+        color: var(--forest);
+        font-size: 1.35rem;
+        font-weight: 900;
+        line-height: 1.55;
       }
 
       .closing {
         color: #fff;
-        background: var(--sage-deep);
+        background: var(--forest-deep);
       }
 
-      .closing .wrap {
+      .closing-grid {
         display: grid;
-        grid-template-columns: minmax(0, 0.7fr) minmax(300px, 1.3fr);
-        gap: clamp(28px, 5vw, 70px);
-        align-items: center;
+        grid-template-columns: minmax(300px, 0.84fr) minmax(360px, 1.16fr);
+        gap: 48px 78px;
+        align-items: start;
+      }
+
+      .closing .section-label {
+        color: #f2c55d;
       }
 
       .closing p {
         margin: 0;
-        color: rgba(255, 255, 255, 0.86);
-        font-size: clamp(1.12rem, 2vw, 1.34rem);
-        line-height: 1.65;
-        word-break: keep-all;
+        color: rgba(255, 255, 255, 0.84);
+        font-size: 1.14rem;
+      }
+
+      .closing .clean-list {
+        margin-top: 26px;
+      }
+
+      .closing .clean-list li {
+        color: rgba(255, 255, 255, 0.88);
       }
 
       footer {
-        padding: 28px clamp(20px, 4vw, 64px);
+        padding: 28px 4vw;
         color: var(--muted);
-        background: #ffffff;
-        font-size: 0.9rem;
+        background: #fff;
+        font-size: 0.86rem;
       }
 
       footer .wrap {
         display: flex;
         justify-content: space-between;
-        gap: 16px;
+        gap: 18px;
       }
 
-      @media (max-width: 840px) {
+      @media (max-width: 960px) {
+        .section-head,
+        .story-grid,
+        .portfolio-item,
+        .portfolio-item.text-first,
+        .closing-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .philosophy-grid,
+        .metrics,
+        .career-groups,
+        .lessons-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .metric:nth-child(odd) {
+          border-left: 0;
+        }
+
+        .metric:nth-child(n + 3) {
+          border-top: 1px solid var(--line);
+        }
+
+        .care-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 700px) {
+        html {
+          scroll-padding-top: 18px;
+        }
+
         .hero {
-          min-height: 670px;
-          padding-bottom: 64px;
+          min-height: min(680px, 86svh);
+          padding: 22px 20px 48px;
+          background-position: 58% 42%;
         }
 
         .nav {
@@ -358,134 +862,194 @@
         }
 
         .nav-links {
+          width: 100%;
+          padding-bottom: 6px;
           justify-content: flex-start;
+          overflow-x: auto;
+          font-size: 0.8rem;
         }
 
         .hero-content {
           padding-top: 48px;
         }
 
-        .intro-grid,
-        .philosophy,
-        .experience-grid,
-        .closing .wrap {
-          grid-template-columns: 1fr;
+        h1 {
+          font-size: 3.25rem;
+        }
+
+        h2 {
+          font-size: 2.15rem;
+        }
+
+        h3 {
+          font-size: 1.4rem;
+        }
+
+        .hero-lead {
+          font-size: 1.08rem;
+        }
+
+        .hero-actions,
+        .button {
+          width: 100%;
         }
 
         .section {
-          padding-top: 58px;
-          padding-bottom: 58px;
+          padding: 64px 20px;
         }
 
-        .principle {
+        .section-head,
+        .story-grid {
+          gap: 30px;
+        }
+
+        .philosophy-grid,
+        .metrics,
+        .career-groups,
+        .happiness-gallery,
+        .lessons-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .metric,
+        .metric:first-child,
+        .metric:nth-child(odd) {
           min-height: auto;
+          padding: 24px 0;
+          border-top: 1px solid var(--line);
+          border-left: 0;
+        }
+
+        .metrics {
+          border-top: 0;
+        }
+
+        .portfolio-item {
+          gap: 30px;
+          padding: 42px 0;
+        }
+
+        .project-copy h3 {
+          font-size: 1.68rem;
+        }
+
+        .project-facts div,
+        .sample-rows div {
+          grid-template-columns: 1fr;
+          gap: 4px;
+        }
+
+        .ppt-gallery {
+          grid-template-columns: 1fr;
+        }
+
+        .ppt-gallery figure:first-child {
+          grid-column: auto;
+        }
+
+        .worksheet {
+          min-height: 440px;
+          padding: 22px;
+        }
+
+        .care-flow {
+          grid-template-columns: 1fr;
+          border-top: 0;
+        }
+
+        .flow-step,
+        .flow-step:first-child {
+          min-height: auto;
+          padding: 20px 0;
+          border-top: 1px solid var(--line);
+          border-left: 0;
+        }
+
+        .sample-card,
+        .site-preview {
+          min-height: auto;
+        }
+
+        .preview-facts {
+          grid-template-columns: 1fr;
         }
 
         footer .wrap {
           flex-direction: column;
         }
-      }
-
-      @media (max-width: 520px) {
-        .hero {
-          min-height: 640px;
-        }
 
         h1,
         h2,
         h3,
-        .hero-lead,
-        .body-copy,
-        .quote-band,
-        .principle p,
-        .list-card li,
-        .closing p {
+        p,
+        li,
+        dd,
+        dt,
+        span,
+        strong {
           overflow-wrap: anywhere;
           word-break: normal;
-        }
-
-        h1 {
-          font-size: clamp(2.72rem, 14vw, 3.35rem);
-        }
-
-        h2 {
-          font-size: clamp(1.82rem, 9vw, 2.1rem);
-        }
-
-        .nav-links {
-          gap: 8px 12px;
-          font-size: 0.84rem;
-        }
-
-        .button {
-          width: 100%;
-        }
-
-        .list-card,
-        .principle {
-          padding: 24px;
         }
       }
     </style>
   </head>
   <body>
-    <header class="hero">
-      <nav class="nav" aria-label="주요 섹션">
-        <div class="brand">권지훈 목사</div>
-        <div class="nav-links">
-          <a href="#intro">소개</a>
-          <a href="#philosophy">목회철학</a>
-          <a href="#strengths">은사와 경험</a>
-        </div>
-      </nav>
+    <a class="skip-link" href="#main">본문으로 이동</a>
 
-      <div class="hero-content">
-        <p class="eyebrow">다음세대 사역 · 예배 인도 · 체계적인 사역 지원</p>
-        <h1>권지훈 목사</h1>
-        <p class="hero-lead">
-          말씀과 예배의 본질을 지키며, 다음세대를 세우고 사역 현장을 체계적으로 지원하는 목회를 지향합니다.
-        </p>
-        <div class="hero-actions">
-          <a class="button primary" href="#intro">소개 보기</a>
-          <a class="button" href="#philosophy">목회철학 보기</a>
+    <header class="hero">
+      <div class="hero-inner">
+        <nav class="nav" aria-label="주요 섹션">
+          <div class="brand">권지훈 목사</div>
+          <div class="nav-links">
+            <a href="#story">신앙 이야기</a>
+            <a href="#philosophy">목회철학</a>
+            <a href="#career">사역 경력</a>
+            <a href="#portfolio">포트폴리오</a>
+            <a href="#care">돌봄</a>
+            <a href="#lessons">배운 점</a>
+          </div>
+        </nav>
+
+        <div class="hero-content">
+          <p class="eyebrow">말씀 · 다음세대 · 예배와 돌봄</p>
+          <h1>권지훈 목사</h1>
+          <p class="hero-lead">
+            말씀을 삶으로 이어, 다음세대 한 사람을 세워가는 목회를 지향합니다. 설교와 시각자료,
+            2부 활동과 후속 돌봄이 하나의 흐름이 되도록 사역해 왔습니다.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#story">신앙 이야기</a>
+            <a class="button" href="#portfolio">사역 포트폴리오</a>
+          </div>
         </div>
       </div>
     </header>
 
-    <main>
-      <section class="section" id="intro">
-        <div class="wrap intro-grid">
+    <main id="main">
+      <section class="section" id="story">
+        <div class="wrap story-grid">
           <div>
-            <p class="section-label">짧은 소개문</p>
-            <h2>다음세대 말씀 양육과 체계적인 사역 지원을 균형 있게 감당해 온 목회자</h2>
-            <div class="quote-band">
-              한 영혼을 깊이 돌보고, 말씀의 본질을 삶으로 연결하는 사역을 지향합니다.
+            <p class="section-label">개인 신앙 이야기</p>
+            <h2>가정에서 배운 말씀,<br>내 신앙으로 만난 하나님</h2>
+            <div class="story-note">
+              청소년기에 만난 말씀은 한 사람의 믿음과 삶의 방향을 세우는 중요한 출발점이 될 수 있습니다.
             </div>
           </div>
           <div class="body-copy">
             <p>
-              권지훈 목사는 아동부와 청소년부 다음세대 사역을 중심으로 설교, 예배 진행, 2부 순서,
-              새친구 정착, 교사 회의, 절기 사역을 감당해 왔으며, 동시에 주보, 예배 보고, 일정 관리 등
-              사역의 원활한 진행을 돕는 지원 업무도 성실히 챙겨 왔습니다.
+              대학 시절 네비게이토 선교회에서 말씀을 배우고 신앙생활을 이어오신 부모님 아래에서
+              자랐습니다. 두 분이 말씀을 암송하고 매일 아침 경건의 시간을 갖는 모습을 보며,
+              하나님과 말씀은 제게 자연스러운 일상의 일부가 되었습니다.
             </p>
             <p>
-              아이들과 청소년들이 말씀을 어렵고 먼 이야기로만 듣지 않고 자기 삶 안에서 붙잡을 수 있도록,
-              설교와 예배 후 활동, 2부 순서, 절기 프로그램이 하나의 흐름으로 이어지게 기획하고
-              진행해 왔습니다.
+              고등학교 시절에는 SFC를 통해 성경을 배우며 신앙생활에 스스로 관심을 갖기 시작했습니다.
+              가정에서 익숙하게 접했던 신앙이 말씀 앞에서 질문하고 응답하는 제 자신의 믿음으로 자라기
+              시작한 때였습니다.
             </p>
             <p>
-              또한 새벽기도, 수요예배, 금요철야예배 등 장년 예배에서 설교 대타와 예배 인도를 맡아 온
-              경험이 있으며, 청년 시절부터 이어온 찬양팀 사역을 바탕으로 금요철야예배 찬양인도도 꾸준히
-              감당해 왔습니다.
-            </p>
-            <p>
-              사역 현장에서는 주보 작성, 예배 보고, 자료 정리, 일정 관리처럼 눈에 잘 띄지 않지만
-              사역의 안정적인 기초가 되는 지원 실무를 꾸준히 도맡아 왔습니다.
-            </p>
-            <p>
-              최근에는 이러한 사역 관리 흐름을 스마트하게 구조화하여, 목회자와 교사들이 행정적인
-              번거로움에서 벗어나 한 영혼 한 영혼을 더 깊이 살피고 돌볼 수 있는 환경을 만드는 데
-              집중하고 있습니다.
+              처음 사역을 시작하게 한 것도 말씀 가운데 깨닫게 하신 하나님의 사랑의 기쁨이었습니다.
+              그래서 다음세대가 교회 문화에 익숙해지는 데 머물지 않고, 말씀을 통해 하나님을 인격적으로
+              알아가며 자신의 감정과 관계, 학업과 진로를 하나님 앞에서 바라보도록 함께하고자 합니다.
             </p>
           </div>
         </div>
@@ -493,75 +1057,324 @@
 
       <section class="section alt" id="philosophy">
         <div class="wrap">
-          <p class="section-label">목회철학</p>
-          <h2>말씀의 본질을 지키며, 사람의 삶 가까이로 연결하는 사역</h2>
-          <div class="philosophy" aria-label="목회철학 세 가지">
+          <div class="section-head">
+            <div>
+              <p class="section-label">목회철학</p>
+              <h2>말씀에서 시작해<br>삶과 돌봄으로 이어갑니다</h2>
+            </div>
+            <p class="section-intro">
+              듣는 사람의 눈높이에서 시작하되 말씀의 본질은 가볍게 만들지 않고, 예배에서 나온 한마디를
+              다음 주의 기도와 대화까지 이어가는 일을 중요하게 여깁니다.
+            </p>
+          </div>
+
+          <div class="philosophy-grid">
             <article class="principle">
-              <span class="principle-number">1</span>
+              <span class="principle-number">01</span>
               <h3>살아 있는 말씀</h3>
-              <p>
-                말씀은 단순한 지식 전달이 아니라, 하나님께서 자기 백성에게 음성을 들려주시고, 각자의 삶
-                가운데 베푸신 은혜와 인도하심을 깨닫게 하시는 살아 있는 말씀이라고 믿습니다.
-              </p>
+              <p>말씀은 하나님께서 자기 백성에게 음성을 들려주시고 삶 가운데 베푸신 은혜를 깨닫게 하시는 살아 있는 말씀이라고 믿습니다.</p>
             </article>
             <article class="principle">
-              <span class="principle-number">2</span>
+              <span class="principle-number">02</span>
               <h3>눈높이와 본질</h3>
-              <p>
-                설교와 교육은 듣는 사람의 눈높이에서 시작하되, 말씀의 본질은 가볍게 만들지 않는 방향을
-                중요하게 생각합니다.
-              </p>
+              <p>아동에게는 이미지와 움직임을, 청소년에게는 학업과 관계의 언어를 사용하되 마지막에는 말씀을 분명히 붙잡도록 이끕니다.</p>
             </article>
             <article class="principle">
-              <span class="principle-number">3</span>
+              <span class="principle-number">03</span>
               <h3>연결되는 돌봄</h3>
-              <p>
-                예배, 설교, 활동, 교사 돌봄, 새친구 정착이 따로 움직이지 않고 하나의 흐름으로 연결되도록
-                사역을 설계하고자 합니다.
-              </p>
+              <p>설교와 2부 활동, 교사와의 대화, 새친구 정착이 따로 움직이지 않고 다음 만남까지 이어지도록 설계합니다.</p>
+            </article>
+            <article class="principle">
+              <span class="principle-number">04</span>
+              <h3>사람을 위한 기반</h3>
+              <p>반복 업무를 정확한 흐름으로 정리하여 목회자와 교사가 기도하고 사람을 기억할 시간과 마음을 지키고자 합니다.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section" id="strengths">
+      <section class="section" id="career">
         <div class="wrap">
-          <p class="section-label">주요 은사와 경험</p>
-          <h2>설교와 교육 설계, 예배 인도, 체계적인 사역 지원</h2>
-          <div class="experience-grid">
-            <article class="list-card">
-              <h3>주요 은사와 강점</h3>
-              <ul>
-                <li>아동부·청소년부 다음세대 사역 기획과 진행</li>
-                <li>설교 내용을 활동, PPT, 2부 순서로 연결하는 교육 설계</li>
-                <li>예배 보고서, 주보, 부서 일정 등 안정적인 관리 실무</li>
-                <li>스마트 도구를 활용한 사역 환경 효율화</li>
+          <div class="section-head">
+            <div>
+              <p class="section-label">사역 경력</p>
+              <h2>말씀 사역과 예배 인도의 축적</h2>
+            </div>
+            <p class="section-intro">
+              아래 기간과 수치는 현재 보유한 설교 원고와 예배 자료에서 확인되는 범위입니다.
+              실제 재직 기간과 역할은 공식 이력서에서 별도로 확인합니다.
+            </p>
+          </div>
+
+          <div class="metrics" aria-label="확인 가능한 사역 자료 범위">
+            <div class="metric">
+              <span class="metric-name">아동부 말씀 사역</span>
+              <strong>2016–2026</strong>
+              <span>보존 설교 문서 421개</span>
+            </div>
+            <div class="metric">
+              <span class="metric-name">청소년부 말씀 사역</span>
+              <strong>2024–2026</strong>
+              <span>최종 설교 문서 51개</span>
+            </div>
+            <div class="metric">
+              <span class="metric-name">금요철야 찬양인도</span>
+              <strong>27회</strong>
+              <span>2024.07–2026.05 확인 기록</span>
+            </div>
+            <div class="metric">
+              <span class="metric-name">장년 예배 설교·인도</span>
+              <strong>7회</strong>
+              <span>2026.04–05 확인 자료</span>
+            </div>
+          </div>
+
+          <div class="career-groups">
+            <article class="career-group">
+              <h3>다음세대 사역</h3>
+              <ul class="clean-list">
+                <li>아동부·청소년부 설교와 예배 진행</li>
+                <li>설교 내용을 PPT·활동지·2부 활동으로 연결</li>
+                <li>새친구 정착, 절기·초청 사역, 교사 협력</li>
+                <li>학생의 학업·관계·감정·진로를 반영한 활동 설계</li>
               </ul>
             </article>
-            <article class="list-card">
-              <h3>설교·예배 인도 경험</h3>
-              <ul>
-                <li>아동부·청소년부 설교 및 예배 진행</li>
-                <li>새벽기도, 수요예배, 금요철야예배 등 장년 예배 설교 대타 경험</li>
-                <li>주일저녁예배 인도문 작성 및 예배 흐름 준비</li>
-                <li>청년 시절부터 찬양팀 및 예배 찬양인도 경험</li>
-                <li>금요철야 찬양인도와 찬양팀 사역 경험</li>
+            <article class="career-group">
+              <h3>예배·찬양·운영</h3>
+              <ul class="clean-list">
+                <li>새벽기도·수요예배·금요철야예배 설교와 예배 인도</li>
+                <li>금요철야 찬양인도, 선곡과 콘티 준비</li>
+                <li>주보·예배 보고서·설교 녹취와 요약·부서 일정 관리</li>
+                <li>AI와 자동화 도구를 활용한 반복 업무 정리</li>
               </ul>
             </article>
           </div>
+        </div>
+      </section>
+
+      <section class="section alt" id="portfolio">
+        <div class="wrap">
+          <div class="section-head">
+            <div>
+              <p class="section-label">사역 포트폴리오</p>
+              <h2>말씀을 삶으로 연결한 교육 설계</h2>
+            </div>
+            <p class="section-intro">
+              결과물의 디자인만 보여주지 않고, 말씀의 주제와 기획 의도, 직접 제작한 자료, 현장 진행과
+              그 과정에서 배운 점을 함께 소개합니다.
+            </p>
+          </div>
+
+          <div class="portfolio-list">
+            <article class="portfolio-item">
+              <div class="ppt-gallery" aria-label="감사 나무 살리기 PPT 화면">
+                <figure>
+                  <img src="assets/activity-ppt-cover.png" alt="감사 나무 살리기 2부 활동 PPT 표지" loading="lazy">
+                  <figcaption>직접 제작한 2부 활동 PPT 표지</figcaption>
+                </figure>
+                <figure>
+                  <img src="assets/activity-ppt-mission.png" alt="감사 나무 살리기 오늘의 미션 화면" loading="lazy">
+                  <figcaption>찾기·바꾸기·살리기 진행 구조</figcaption>
+                </figure>
+                <figure>
+                  <img src="assets/activity-ppt-work.png" alt="내 진짜 감사를 적는 PPT 활동 화면" loading="lazy">
+                  <figcaption>개인 감사 열매 작성 화면</figcaption>
+                </figure>
+              </div>
+              <div class="project-copy">
+                <p class="project-label">아동부 2부 활동 · PPT · A3 결과물</p>
+                <h3>감사 나무 살리기</h3>
+                <p>
+                  불평의 언어를 멈추고 이미 받은 은혜와 일상의 감사를 찾도록, 몸을 움직이는 탐색과
+                  짧은 문장 쓰기를 한 흐름으로 구성했습니다.
+                </p>
+                <dl class="project-facts">
+                  <div><dt>말씀 주제</dt><dd>불평의 열매를 감사의 열매로 바꾸기</dd></div>
+                  <div><dt>직접 제작</dt><dd>10장 PPT, 숨은 열매, 감사 보기, 개인 감사 열매</dd></div>
+                  <div><dt>현장 진행</dt><dd>열매 찾기 → 감사 연결 → 내 감사 쓰기 → A3 나무 완성</dd></div>
+                  <div><dt>배운 점</dt><dd>움직임과 한 문장 쓰기를 함께 둘 때 어린 아이도 자기 말로 참여하기 쉬웠습니다.</dd></div>
+                </dl>
+              </div>
+            </article>
+
+            <article class="portfolio-item text-first">
+              <div class="project-copy">
+                <p class="project-label">청소년부 2부 활동 · 인쇄 디자인 · 진행용 PPT</p>
+                <h3>행복 카드 생존게임</h3>
+                <p>
+                  내가 만들어 낸 행복과 이미 내게 주어진 행복을 카드 선택과 주사위 보드게임으로 직접
+                  비교하도록 구성했습니다. 선택의 이유가 예배 후 대화의 접점이 되도록 질문을 남겼습니다.
+                </p>
+                <dl class="project-facts">
+                  <div><dt>말씀 주제</dt><dd>내가 만든 행복과 이미 주어진 행복</dd></div>
+                  <div><dt>직접 제작</dt><dd>인쇄용 행복 카드 2종, 팀별 카드와 게임 규칙, 진행용 PPT</dd></div>
+                  <div><dt>현장 진행</dt><dd>팀별 카드 선택과 주사위 게임, 선택 이유 나눔</dd></div>
+                  <div><dt>배운 점</dt><dd>승패보다 무엇을 행복으로 여기고 왜 고르는지가 더 중요한 대화가 되었습니다.</dd></div>
+                </dl>
+              </div>
+              <div class="happiness-gallery" aria-label="행복 카드 인쇄 디자인">
+                <figure>
+                  <img src="assets/happiness-cards-1.png" alt="숨 쉴 수 있음, 물 마실 수 있음 등 이미 주어진 행복 카드" loading="lazy">
+                  <figcaption>이미 주어진 행복 카드</figcaption>
+                </figure>
+                <figure>
+                  <img src="assets/happiness-cards-2.png" alt="폰, 게임, 성적, 돈 등 내가 얻고 싶은 행복 카드" loading="lazy">
+                  <figcaption>내가 만들어 내는 행복 카드</figcaption>
+                </figure>
+              </div>
+            </article>
+
+            <article class="portfolio-item">
+              <div class="worksheet" aria-label="공개용 상태메시지 활동지 샘플">
+                <div class="worksheet-top">
+                  <strong>오늘의 상태메시지</strong>
+                  <span>공개용 예시</span>
+                </div>
+                <div class="worksheet-block">
+                  <h4>지금 내 마음 배터리는 어느 정도인가요?</h4>
+                  <div class="battery-scale" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                </div>
+                <div class="worksheet-block">
+                  <h4>요즘 내 마음을 가장 많이 쓰게 하는 일</h4>
+                  <div class="worksheet-line"></div>
+                  <div class="worksheet-line"></div>
+                </div>
+                <div class="worksheet-block">
+                  <h4>이번 주에 붙잡을 말씀 한 문장</h4>
+                  <div class="message-box">학생이 고른 말씀과 자기 상태메시지를 적는 자리</div>
+                </div>
+              </div>
+              <div class="project-copy">
+                <p class="project-label">청소년부 2부 활동 · 활동지 · 예배 후 대화</p>
+                <h3>오늘의 상태메시지와 내 마음 아지트</h3>
+                <p>
+                  전체 앞에서 말하기 어려운 학생도 활동지와 선택형 질문, 짧은 나눔을 통해 자기 생각을
+                  표현하도록 구성했습니다. 표현한 내용은 원하는 범위에서만 나누고 예배 후 대화로 이었습니다.
+                </p>
+                <dl class="project-facts">
+                  <div><dt>말씀 주제</dt><dd>말씀을 감정, 관계, 학업과 진로에 연결해 보기</dd></div>
+                  <div><dt>직접 제작</dt><dd>마음 배터리, 말씀 DM, 상태메시지와 자기점검 활동지</dd></div>
+                  <div><dt>현장 진행</dt><dd>개인 작성 → 말씀 선택 → 선택 나눔 → 예배 후 대화</dd></div>
+                  <div><dt>배운 점</dt><dd>학생의 참여는 큰 목소리만이 아니며, 여러 표현 통로가 실제 고민을 들을 기회를 열었습니다.</dd></div>
+                </dl>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="care">
+        <div class="wrap">
+          <div class="section-head">
+            <div>
+              <p class="section-label">기억하고 이어가는 돌봄</p>
+              <h2>한 번 들은 이야기를<br>다음 만남으로 이어갑니다</h2>
+            </div>
+            <p class="section-intro">
+              돌봄은 한 번의 긴 대화보다, 아이가 한 말과 관심사를 기억하고 다음 주에 다시 묻는 과정이라고
+              생각합니다. 필요한 내용은 교사와 나누고 작은 역할과 기도로 연결합니다.
+            </p>
+          </div>
+
+          <div class="care-flow" aria-label="돌봄 운영 흐름">
+            <div class="flow-step"><strong>01</strong><span>예배와 활동에서 발견</span></div>
+            <div class="flow-step"><strong>02</strong><span>말과 관심사를 날짜별 기록</span></div>
+            <div class="flow-step"><strong>03</strong><span>개별 카드에 다음 확인 정리</span></div>
+            <div class="flow-step"><strong>04</strong><span>교사와 필요한 범위 공유</span></div>
+            <div class="flow-step"><strong>05</strong><span>다음 주 대화와 역할로 연결</span></div>
+          </div>
+
+          <div class="care-grid">
+            <article class="sample-card">
+              <p class="tool-label">공개용 가상 샘플</p>
+              <h3>A학생 관리카드</h3>
+              <p class="sample-note">실제 아이의 이름·학교·보호자·연락처·민감한 기록은 공개하지 않습니다.</p>
+              <dl class="sample-rows">
+                <div><dt>관심사</dt><dd>그림, 음악, 친구와 함께하는 팀 활동</dd></div>
+                <div><dt>연결 접점</dt><dd>2부 활동에서 직접 고른 카드와 한 문장</dd></div>
+                <div><dt>맡은 역할</dt><dd>예배 PPT 보조, 활동 준비물 확인</dd></div>
+                <div><dt>교사 협력</dt><dd>예배 전 역할을 다시 안내하고 마친 뒤 짧게 대화</dd></div>
+                <div><dt>다음 확인</dt><dd>지난주 활동을 먼저 언급하고 이번 주 관심사를 묻기</dd></div>
+              </dl>
+            </article>
+
+            <article class="site-preview" aria-label="가상 교회 아동부 소개 페이지 샘플">
+              <div class="browser-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+              <div class="preview-visual"></div>
+              <div class="preview-copy">
+                <p class="tool-label">첫 방문 가정을 위한 안내 화면</p>
+                <h3>지역교회 아동부</h3>
+                <p>방문 전에 예배 흐름과 첫날의 과정을 이해하도록 실제 소개 페이지를 비식별 샘플로 다시 구성했습니다.</p>
+                <div class="preview-facts">
+                  <div><strong>주일 예배</strong><span>시간·장소 비공개</span></div>
+                  <div><strong>진행 흐름</strong><span>찬양 · 말씀 · 2부 활동</span></div>
+                  <div><strong>첫 방문</strong><span>자리 안내 · 작은 역할</span></div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" id="lessons">
+        <div class="wrap">
+          <div class="section-head">
+            <div>
+              <p class="section-label">사역에서 확인한 변화와 배운 점</p>
+              <h2>숫자보다 오래 남은<br>작은 변화들</h2>
+            </div>
+            <p class="section-intro">
+              출석 숫자만으로는 다음세대 사역의 변화를 충분히 말하기 어렵습니다. 대신 학생이 자기 방식으로
+              참여하고, 한마디가 대화와 기도로 이어지고, 부족했던 진행을 다음 주에 고친 장면을 기록했습니다.
+            </p>
+          </div>
+
+          <div class="lessons-grid">
+            <article class="lesson">
+              <h3>참여 방식은 하나가 아니었습니다</h3>
+              <p>공개 발표뿐 아니라 익명 응답, 활동지, 팀 미션, PPT 보조처럼 각자가 들어올 수 있는 여러 통로를 마련했습니다.</p>
+            </article>
+            <article class="lesson">
+              <h3>2부 활동은 돌봄의 접점이 되었습니다</h3>
+              <p>학업과 관계, 입시와 진로에 관한 표현이 활동에서 나왔고, 예배 후 짧은 대화와 기도 제목으로 이어졌습니다.</p>
+            </article>
+            <article class="lesson">
+              <h3>기억하고 다시 묻는 일이 중요했습니다</h3>
+              <p>활동에서 나온 한마디를 기록하고 다음 주에 다시 안부를 묻고 작은 역할로 연결하는 일을 중요하게 여겼습니다.</p>
+            </article>
+            <article class="lesson">
+              <h3>부족한 진행도 다음 기획의 자료가 되었습니다</h3>
+              <p>규칙을 줄이고, 마지막에 붙잡을 말씀을 먼저 정하고, 교사와 역할을 미리 나누는 방식으로 매주 보완했습니다.</p>
+            </article>
+          </div>
+
+          <p class="lesson-quote">
+            프로그램을 잘 마쳤다는 사실보다, 활동에서 나온 한마디를 다음 주까지 기억하고 다시 묻는 일이 더 중요했습니다.
+          </p>
         </div>
       </section>
 
       <section class="section closing">
-        <div class="wrap">
+        <div class="wrap closing-grid">
           <div>
-            <p class="section-label">앞으로의 방향</p>
-            <h2>건강하고 지속 가능한 사역을 향하여</h2>
+            <p class="section-label">설교 · 예배 · 찬양인도</p>
+            <h2>말씀과 예배의 자리를 꾸준히 준비해 왔습니다</h2>
+            <ul class="clean-list">
+              <li>아동부·청소년부 설교와 예배 진행</li>
+              <li>새벽기도·수요예배·금요철야예배 설교와 인도</li>
+              <li>금요철야 찬양인도, 선곡과 콘티 준비</li>
+            </ul>
           </div>
-          <p>
-            앞으로도 말씀과 다음세대, 그리고 이를 든든히 뒷받침하는 사역 지원 체계를 연결하여
-            건강하고 지속 가능한 목회를 하고자 합니다.
-          </p>
+          <div>
+            <p class="section-label">앞으로의 목회</p>
+            <p>
+              앞으로도 말씀과 다음세대, 예배와 돌봄, 이를 뒷받침하는 운영의 흐름을 함께 세워가고자 합니다.
+              목회자와 교사가 행정에 소모되기보다 기도하고 사람을 기억할 수 있도록 정리하며, 아이들과
+              청소년들이 말씀을 자기 삶에서 붙잡는 순간을 더 깊이 살피겠습니다.
+            </p>
+          </div>
         </div>
       </section>
     </main>
@@ -569,7 +1382,7 @@
     <footer>
       <div class="wrap">
         <span>권지훈 목사 소개 페이지</span>
-        <span>Next Generation Ministry · Worship · Ministry Support</span>
+        <span>Next Generation Ministry · Worship · Care</span>
       </div>
     </footer>
   </body>

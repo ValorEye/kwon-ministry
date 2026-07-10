@@ -500,6 +500,29 @@
         object-position: center top;
       }
 
+      .evidence-visual.evidence-duo {
+        display: grid;
+        grid-template-rows: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        padding: 10px;
+      }
+
+      .evidence-duo a {
+        min-height: 0;
+        overflow: hidden;
+        border: 1px solid #e4dce0;
+        background: #fff;
+      }
+
+      .evidence-duo a:focus-visible {
+        outline: 4px solid var(--mustard);
+        outline-offset: -4px;
+      }
+
+      .evidence-duo img {
+        object-position: center !important;
+      }
+
       .evidence-card.is-wide .evidence-visual {
         background: #f7f2f5;
       }
@@ -965,6 +988,15 @@
         gap: 28px;
         margin-top: 48px;
         align-items: stretch;
+      }
+
+      .care-grid-single {
+        grid-template-columns: minmax(0, 900px);
+        justify-content: center;
+      }
+
+      .care-grid-single .record-card {
+        min-height: 0;
       }
 
       .record-card,
@@ -1651,9 +1683,14 @@
             </article>
 
             <article class="evidence-card accent-coral is-wide">
-              <a class="evidence-visual" href="assets/ppt-status-cover.png" target="_blank" rel="noopener" title="오늘의 상태메시지 PPT 크게 보기">
-                <img src="assets/ppt-status-cover.png" alt="휴대전화 상태메시지 화면을 활용한 청소년부 2부 활동 PPT 표지" loading="lazy">
-              </a>
+              <div class="evidence-visual evidence-duo" aria-label="오늘의 상태메시지 PPT 대표 화면 두 장">
+                <a href="assets/ppt-status-word-dm.png" target="_blank" rel="noopener" title="말씀 DM 활동 화면 크게 보기">
+                  <img src="assets/ppt-status-word-dm.png" alt="불안 알림을 잠재울 말씀 스티커를 고르는 말씀 DM 활동 화면" loading="lazy">
+                </a>
+                <a href="assets/ppt-status-closing.png" target="_blank" rel="noopener" title="오늘의 상태메시지 마무리 화면 크게 보기">
+                  <img src="assets/ppt-status-closing.png" alt="주신 말씀을 간직하라는 오늘의 상태메시지 마무리 화면" loading="lazy">
+                </a>
+              </div>
               <div class="evidence-copy">
                 <p class="evidence-type">청소년부 · PPT 디자인</p>
                 <h3>오늘의 상태메시지</h3>
@@ -1674,59 +1711,59 @@
           <div class="section-head">
             <div>
               <p class="section-label">교회 운영과 자동화</p>
-              <h2>반복되는 행정을 정리해<br>말씀과 사람을 살필 시간을 만들었습니다</h2>
+              <h2>반복되는 행정을 정리해<br>말씀과 영혼을 살필 시간을 만들었습니다</h2>
             </div>
             <p class="section-intro">
-              주보의 본문과 찬송, 예배 순서와 일정을 대조하고, 방송 상태와 후속 연락을 보고했습니다.
-              설교·주보·찬양·주간관리 자료는 다음 말씀과 예배, 돌봄을 준비하는 흐름으로 이어 왔습니다.
+              주보 초안과 최종 오타점검, 아동부 홈페이지의 오는 주 설교·공과 갱신, 설교 녹취의
+              교정·요약·검색 흐름을 자동화했습니다. 반복 확인을 줄여 말씀 준비와 영혼 돌봄에 더 집중했습니다.
             </p>
           </div>
 
           <div class="evidence-grid">
             <article class="evidence-card accent-teal">
-              <a class="evidence-visual" href="assets/bulletin-page.png" target="_blank" rel="noopener" title="주보 한 면 크게 보기">
-                <img src="assets/bulletin-page.png" alt="예배 시간표와 주일낮예배 순서, 교회 소식과 대조 항목을 정리한 주보 한 면" loading="lazy">
+              <a class="evidence-visual" href="assets/bulletin-automation-page.png" target="_blank" rel="noopener" title="주보 초안 자동화 흐름 크게 보기">
+                <img src="assets/bulletin-automation-page.png" alt="말씀과 칼럼, 교독과 찬송, 예배위원 정보를 복붙용 주보 초안과 오타점검으로 잇는 자동화 흐름" loading="lazy">
               </a>
               <div class="evidence-copy">
-                <p class="evidence-type">예배 행정 · 주보</p>
-                <h3>주보 제작</h3>
-                <p>본문과 찬송, 성시교독, 예배위원, 날짜와 교회 소식을 대조해 성도들이 필요한 내용을 빠르게 찾도록 정리했습니다.</p>
+                <p class="evidence-type">예배 행정 · 자동화</p>
+                <h3>주보 초안과 오타점검</h3>
+                <p>말씀과 칼럼, 성시교독과 찬송, 예배위원 기록을 대조해 한 주의 복붙용 초안을 만들고 최종 PDF 점검까지 이어지게 했습니다.</p>
                 <dl class="evidence-facts">
-                  <div><dt>담당</dt><dd>내용 정리 · 대조 · 일정 연결</dd></div>
-                  <div><dt>자료</dt><dd>예배 시간과 순서 한 면</dd></div>
-                  <div><dt>활용</dt><dd>주일예배와 주간 일정 안내</dd></div>
+                  <div><dt>입력</dt><dd>말씀 · 칼럼 · 교독 · 찬송 · 예배위원</dd></div>
+                  <div><dt>자동화</dt><dd>녹취 · 대조 · 후보 정리 · 초안 생성</dd></div>
+                  <div><dt>결과</dt><dd>복붙용 초안 · 최종 오타점검</dd></div>
                 </dl>
               </div>
             </article>
 
             <article class="evidence-card accent-coral">
-              <a class="evidence-visual" href="assets/broadcast-report-page.png" target="_blank" rel="noopener" title="방송 모니터 보고 한 면 크게 보기">
-                <img src="assets/broadcast-report-page.png" alt="영상과 라디오 송출 상태, 후속 연락을 정리한 방송 모니터 보고서" loading="lazy">
+              <a class="evidence-visual" href="assets/children-site-automation-page.png" target="_blank" rel="noopener" title="아동부 홈페이지 주간 갱신 흐름 크게 보기">
+                <img src="assets/children-site-automation-page.png" alt="오는 주 설교와 공과, 2부 활동을 첫 방문 가정의 홈페이지 안내로 잇는 주간 갱신 흐름" loading="lazy">
               </a>
               <div class="evidence-copy">
-                <p class="evidence-type">주간 행정 · 보고</p>
-                <h3>방송·통화 보고</h3>
-                <p>영상과 라디오의 시작·마감 시간, 설교와 칼럼 제목, 정상 송출 여부와 문의 처리를 매주 확인했습니다.</p>
+                <p class="evidence-type">첫 방문 가정을 위한 안내 · 자동 갱신</p>
+                <h3>처음 만나는 아동부</h3>
+                <p>직접 제작한 소개 홈페이지에 오는 주 설교와 공과·2부 활동을 반영해, 첫 방문 가정도 예배 전에 말씀과 활동을 알 수 있게 했습니다.</p>
                 <dl class="evidence-facts">
-                  <div><dt>담당</dt><dd>방송 확인 · 기록 · 후속 연락</dd></div>
-                  <div><dt>자료</dt><dd>주간 방송 모니터 보고</dd></div>
-                  <div><dt>활용</dt><dd>송출 점검과 문의 처리</dd></div>
+                  <div><dt>입력</dt><dd>오는 주 설교 · 공과 · 2부 활동</dd></div>
+                  <div><dt>자동화</dt><dd>부모 안내 문안 · 홈페이지 갱신</dd></div>
+                  <div><dt>결과</dt><dd>첫 방문 가정과 교사의 공통 안내</dd></div>
                 </dl>
               </div>
             </article>
 
             <article class="evidence-card accent-violet">
-              <a class="evidence-visual" href="assets/ministry-system-page.png" target="_blank" rel="noopener" title="자료관리 흐름 크게 보기">
-                <img src="assets/ministry-system-page.png" alt="설교, 예배, 찬양과 주간 운영 자료가 다음 사역으로 이어지는 관리 흐름" loading="lazy">
+              <a class="evidence-visual" href="assets/sermon-automation-page.png" target="_blank" rel="noopener" title="설교 녹취와 말씀 자료화 흐름 크게 보기">
+                <img src="assets/sermon-automation-page.png" alt="설교 음성을 문맥과 성경으로 교정하고 사람 검수, 요약과 다음 말씀 준비로 잇는 자료화 흐름" loading="lazy">
               </a>
               <div class="evidence-copy">
-                <p class="evidence-type">자료 관리 · 자동화</p>
-                <h3>다음 사역으로 이어지는 자료</h3>
-                <p>원고와 녹취, 주보와 콘티, 일정과 보고를 분류·대조·검색·갱신하는 흐름으로 연결했습니다.</p>
+                <p class="evidence-type">말씀 사역 · 자료화</p>
+                <h3>설교 녹취·교정·요약</h3>
+                <p>설교 음성을 문맥과 성경 본문으로 교정하고 사람 검수로 확정해, 요약과 본문·주제 검색, 다음세대 말씀 준비로 연결했습니다.</p>
                 <dl class="evidence-facts">
-                  <div><dt>담당</dt><dd>수집 · 분류 · 대조 · 검색 · 갱신</dd></div>
-                  <div><dt>자료</dt><dd>말씀·예배·찬양·주간관리</dd></div>
-                  <div><dt>활용</dt><dd>기도 · 말씀 준비 · 후속 돌봄</dd></div>
+                  <div><dt>입력</dt><dd>설교 음성 · Clova 원본</dd></div>
+                  <div><dt>검수</dt><dd>성경 대조 · 사람 최종 확인</dd></div>
+                  <div><dt>활용</dt><dd>설교요약 · 본문·주제 검색</dd></div>
                 </dl>
               </div>
             </article>
@@ -1756,7 +1793,7 @@
             <div class="flow-step"><strong>05</strong><span>교사 협력과 다음 사역으로 연결</span></div>
           </div>
 
-          <div class="care-grid">
+          <div class="care-grid care-grid-single">
             <article class="record-card">
               <p class="tool-label">살핌에서 기도와 다음 사역까지</p>
               <h3>돌봄 기록 카드</h3>
@@ -1770,20 +1807,6 @@
               </dl>
             </article>
 
-            <article class="site-preview" aria-label="아동부 소개 페이지 화면">
-              <div class="browser-bar" aria-hidden="true"><span></span><span></span><span></span></div>
-              <img class="preview-visual" src="assets/children-ministry-page.png" alt="직접 제작한 아동부 소개 웹페이지 첫 화면" loading="lazy">
-              <div class="preview-copy">
-                <p class="tool-label">첫 방문 가정을 위한 안내</p>
-                <h3>처음 만나는 아동부</h3>
-                <p>예배 전 준비부터 2부 활동, 첫 방문의 자리 안내와 다음 연결까지 한 화면에 정리했습니다.</p>
-                <div class="preview-facts">
-                  <div><strong>예배 흐름</strong><span>찬양 · 말씀 · 2부 활동</span></div>
-                  <div><strong>첫 방문</strong><span>자리 안내 · 이름 기억</span></div>
-                  <div><strong>다음 연결</strong><span>새친구 안내 · 다음 활동</span></div>
-                </div>
-              </div>
-            </article>
           </div>
         </div>
       </section>

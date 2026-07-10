@@ -330,12 +330,69 @@
         font-size: 0.9rem;
       }
 
+      .career-timeline {
+        margin-top: 44px;
+      }
+
+      .career-timeline h3,
+      .metrics-title {
+        margin: 0 0 16px;
+        font-size: 1.12rem;
+      }
+
+      .timeline-list {
+        margin: 0;
+        padding: 0;
+        border-top: 2px solid var(--ink);
+        list-style: none;
+      }
+
+      .timeline-item {
+        display: grid;
+        grid-template-columns: 150px minmax(0, 1fr);
+        gap: 32px;
+        align-items: start;
+        padding: 20px 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .timeline-item time {
+        color: var(--forest);
+        font-size: 0.88rem;
+        font-weight: 900;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .timeline-copy strong,
+      .timeline-copy span {
+        display: block;
+      }
+
+      .timeline-copy strong {
+        color: var(--ink);
+        font-size: 1rem;
+      }
+
+      .timeline-copy span {
+        margin-top: 4px;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      .metrics-title {
+        margin-top: 44px;
+      }
+
       .metrics {
         display: grid;
         grid-template-columns: repeat(4, minmax(0, 1fr));
         margin-top: 44px;
         border-top: 1px solid var(--line);
         border-bottom: 1px solid var(--line);
+      }
+
+      .metrics-title + .metrics {
+        margin-top: 16px;
       }
 
       .metric {
@@ -1107,6 +1164,12 @@
           border-top: 0;
         }
 
+        .timeline-item {
+          grid-template-columns: 1fr;
+          gap: 7px;
+          padding: 18px 0;
+        }
+
         .system-overview {
           grid-template-columns: 1fr;
         }
@@ -1308,8 +1371,8 @@
             </article>
             <article class="principle">
               <span class="principle-number">04</span>
-              <h3>사람을 위한 기반</h3>
-              <p>반복 업무를 정확한 흐름으로 정리하여 목회자와 교사가 기도하고 사람을 기억할 시간과 마음을 지키고자 합니다.</p>
+              <h3>영혼 돌봄을 위한 기반</h3>
+              <p>반복 업무를 정확한 흐름으로 정리하여 목회자와 교사가 기도하고 한 영혼을 기억할 시간과 마음을 지키고자 합니다.</p>
             </article>
           </div>
         </div>
@@ -1320,14 +1383,46 @@
           <div class="section-head">
             <div>
               <p class="section-label">사역 경력</p>
-              <h2>말씀 사역과 예배 인도의 축적</h2>
+              <h2>말씀 사역과 예배 인도의 기록</h2>
             </div>
             <p class="section-intro">
-              보존된 설교 원고와 예배 자료의 양을 기준으로 지금까지 쌓아 온 말씀·예배 사역을 정리했습니다.
+              청년 시절 교사와 찬양인도자로 헌신한 때부터 신학대학원 과정, 전도사 사역, 목사 안수와
+              교육목사 사역까지 시간순으로 정리했습니다.
             </p>
           </div>
 
-          <div class="metrics" aria-label="사역 자료 축적량">
+          <div class="career-timeline">
+            <h3>학력과 사역 이력</h3>
+            <ol class="timeline-list">
+              <li class="timeline-item">
+                <time>2008–2019</time>
+                <div class="timeline-copy"><strong>교사·찬양인도자</strong><span>청년 시절 교사와 찬양인도자로 헌신</span></div>
+              </li>
+              <li class="timeline-item">
+                <time datetime="2011">2011</time>
+                <div class="timeline-copy"><strong>단국대학교</strong><span>학사 졸업</span></div>
+              </li>
+              <li class="timeline-item">
+                <time datetime="2017-02">2017.02</time>
+                <div class="timeline-copy"><strong>협성신학대학원</strong><span>신학석사 졸업</span></div>
+              </li>
+              <li class="timeline-item">
+                <time datetime="2020-02-02">2020.02.02</time>
+                <div class="timeline-copy"><strong>전도사 사역 시작</strong><span>권지훈 전도사로 목회 사역 시작</span></div>
+              </li>
+              <li class="timeline-item">
+                <time datetime="2024-10-07">2024.10.07</time>
+                <div class="timeline-copy"><strong>목사 안수</strong><span>노량진 CTS 지하 아트홀</span></div>
+              </li>
+              <li class="timeline-item">
+                <time datetime="2025">2025</time>
+                <div class="timeline-copy"><strong>교육목사</strong><span>교육부 담당</span></div>
+              </li>
+            </ol>
+          </div>
+
+          <h3 class="metrics-title">보존 자료로 본 말씀·예배 사역</h3>
+          <div class="metrics" aria-label="보존 자료로 본 말씀과 예배 사역">
             <div class="metric">
               <span class="metric-name">아동부 말씀 사역</span>
               <strong>421편</strong>

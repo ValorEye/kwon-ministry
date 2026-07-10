@@ -615,6 +615,128 @@
         overflow: hidden;
       }
 
+      .reader-adjustable {
+        font-size: var(--reader-size) !important;
+      }
+
+      .reader-tools {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        z-index: 30;
+        width: min(320px, calc(100vw - 32px));
+        overflow: hidden;
+        border: 1px solid #b9c7c3;
+        border-left: 5px solid var(--mustard);
+        border-radius: 8px;
+        color: var(--ink);
+        background: rgba(255, 255, 255, 0.97);
+        box-shadow: 0 18px 46px rgba(20, 42, 39, 0.2);
+        backdrop-filter: blur(8px);
+      }
+
+      .reader-tools:not([open]) {
+        width: min(238px, calc(100vw - 32px));
+      }
+
+      .reader-tools summary {
+        display: grid;
+        min-height: 50px;
+        padding: 10px 14px;
+        grid-template-columns: 18px minmax(0, 1fr) auto;
+        gap: 8px;
+        align-items: center;
+        list-style: none;
+        cursor: pointer;
+      }
+
+      .reader-tools summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .reader-tools summary::before {
+        color: var(--forest);
+        content: "▾";
+        font-size: 0.9rem;
+        font-weight: 900;
+      }
+
+      .reader-tools[open] summary::before {
+        content: "▴";
+      }
+
+      .reader-tools summary:focus-visible {
+        outline: 3px solid var(--mustard);
+        outline-offset: -3px;
+      }
+
+      .reader-tools-label {
+        font-size: 1rem;
+        font-weight: 900;
+      }
+
+      .reader-tools-value {
+        min-width: 58px;
+        padding: 3px 7px;
+        border-radius: 4px;
+        color: #fff;
+        background: var(--forest);
+        font-size: 0.9rem;
+        font-weight: 900;
+        line-height: 1.4;
+        text-align: center;
+      }
+
+      .reader-slider-row {
+        display: grid;
+        padding: 0 14px 2px;
+        grid-template-columns: 24px minmax(0, 1fr) 30px;
+        gap: 10px;
+        align-items: center;
+      }
+
+      .reader-scale-mark {
+        color: var(--forest);
+        font-size: 0.9rem;
+        font-weight: 900;
+        text-align: center;
+      }
+
+      .reader-scale-mark.large {
+        font-size: 1.3rem;
+      }
+
+      .reader-size-input {
+        width: 100%;
+        min-height: 44px;
+        margin: 0;
+        padding: 0;
+        accent-color: var(--forest);
+        cursor: pointer;
+      }
+
+      .reader-size-input:focus-visible {
+        outline: 3px solid var(--mustard);
+        outline-offset: 2px;
+      }
+
+      .reader-size-limit {
+        margin: 0;
+        padding: 0 16px 12px;
+        color: var(--muted);
+        font-size: 0.78rem;
+        line-height: 1.3;
+        text-align: right;
+      }
+
+      body.reader-enlarged .evidence-facts div {
+        grid-template-columns: 72px minmax(0, 1fr);
+      }
+
+      body.reader-enlarged .record-rows div {
+        grid-template-columns: 128px minmax(0, 1fr);
+      }
+
       .evidence-card.is-wide .evidence-visual {
         background: #f7f2f5;
       }
@@ -1272,6 +1394,12 @@
         gap: 18px;
       }
 
+      @media print {
+        .reader-tools {
+          display: none;
+        }
+      }
+
       @media (max-width: 960px) {
         .section-head,
         .story-grid,
@@ -1345,6 +1473,16 @@
 
         .image-viewer-stage img {
           max-height: calc(100svh - 145px);
+        }
+
+        .reader-tools {
+          right: 10px;
+          bottom: max(10px, env(safe-area-inset-bottom));
+          width: calc(100% - 20px);
+        }
+
+        .reader-tools:not([open]) {
+          width: min(238px, calc(100% - 20px));
         }
 
         .hero-lead {
@@ -1959,6 +2097,29 @@
       </div>
     </footer>
 
+    <details class="reader-tools" open aria-label="본문 글자 크기 조절">
+      <summary>
+        <span class="reader-tools-label">본문 글자 크기</span>
+        <output class="reader-tools-value" id="reader-size-value" for="reader-size">100%</output>
+      </summary>
+      <div class="reader-slider-row">
+        <span class="reader-scale-mark" aria-hidden="true">가</span>
+        <input
+          class="reader-size-input"
+          id="reader-size"
+          type="range"
+          min="100"
+          max="130"
+          step="5"
+          value="100"
+          aria-label="본문 글자 크기"
+          aria-describedby="reader-size-limit"
+        >
+        <span class="reader-scale-mark large" aria-hidden="true">가</span>
+      </div>
+      <p class="reader-size-limit" id="reader-size-limit">최대 130%</p>
+    </details>
+
     <dialog class="image-viewer" id="image-viewer" aria-labelledby="image-viewer-title">
       <div class="image-viewer-shell">
         <div class="image-viewer-bar">
@@ -2010,6 +2171,100 @@
       viewer.addEventListener("close", () => {
         document.body.classList.remove("viewer-open");
         viewerImage.src = "";
+      });
+
+      const readerSizeControl = document.querySelector("#reader-size");
+      const readerSizeValue = document.querySelector("#reader-size-value");
+      const readerStorageKey = "kwon-ministry-reader-size";
+      const readerMin = 100;
+      const readerMax = 130;
+      const readerStep = 5;
+      const readerBaseLimit = 21;
+      const readerSelector = [
+        ".hero-lead",
+        ".story-note",
+        "main p:not(.section-label):not(.evidence-type):not(.tool-label):not(.project-label)",
+        "main li",
+        "main time",
+        ".timeline-copy strong",
+        ".timeline-copy span",
+        ".metric span",
+        "main dt",
+        "main dd",
+        ".flow-step span",
+        "footer span",
+        ".image-viewer-caption"
+      ].join(", ");
+      let readerTargets = [];
+      let readerResizeTimer;
+
+      const normalizeReaderSize = (value) => {
+        const parsed = Number.parseInt(value, 10);
+        const safeValue = Number.isFinite(parsed) ? parsed : readerMin;
+        const steppedValue = Math.round(safeValue / readerStep) * readerStep;
+        return Math.min(readerMax, Math.max(readerMin, steppedValue));
+      };
+
+      const readSavedReaderSize = () => {
+        try {
+          return normalizeReaderSize(localStorage.getItem(readerStorageKey));
+        } catch {
+          return readerMin;
+        }
+      };
+
+      const applyReaderSize = (value, persist = false) => {
+        const normalizedValue = normalizeReaderSize(value);
+        const scale = normalizedValue / 100;
+
+        readerTargets.forEach((target) => {
+          const baseSize = Number.parseFloat(target.dataset.readerBaseSize);
+          target.style.setProperty("--reader-size", `${(baseSize * scale).toFixed(2)}px`);
+        });
+
+        readerSizeControl.value = String(normalizedValue);
+        readerSizeControl.setAttribute("aria-valuetext", `${normalizedValue}%`);
+        readerSizeValue.value = `${normalizedValue}%`;
+        readerSizeValue.textContent = `${normalizedValue}%`;
+        document.body.classList.toggle("reader-enlarged", normalizedValue > readerMin);
+
+        if (persist) {
+          try {
+            localStorage.setItem(readerStorageKey, String(normalizedValue));
+          } catch {
+            // The control still works when browser storage is unavailable.
+          }
+        }
+      };
+
+      const refreshReaderTargets = () => {
+        readerTargets.forEach((target) => {
+          target.classList.remove("reader-adjustable");
+          target.style.removeProperty("--reader-size");
+          delete target.dataset.readerBaseSize;
+        });
+
+        readerTargets = [...document.querySelectorAll(readerSelector)].filter((target) => {
+          const baseSize = Number.parseFloat(getComputedStyle(target).fontSize);
+          return Number.isFinite(baseSize) && baseSize <= readerBaseLimit;
+        });
+
+        readerTargets.forEach((target) => {
+          target.dataset.readerBaseSize = Number.parseFloat(getComputedStyle(target).fontSize).toFixed(2);
+          target.classList.add("reader-adjustable");
+        });
+
+        applyReaderSize(readerSizeControl.value);
+      };
+
+      readerSizeControl.value = String(readSavedReaderSize());
+      refreshReaderTargets();
+      readerSizeControl.addEventListener("input", (event) => {
+        applyReaderSize(event.currentTarget.value, true);
+      });
+      window.addEventListener("resize", () => {
+        window.clearTimeout(readerResizeTimer);
+        readerResizeTimer = window.setTimeout(refreshReaderTargets, 180);
       });
     </script>
   </body>

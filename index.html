@@ -412,6 +412,121 @@
         background: var(--mustard);
       }
 
+      .system-section {
+        background: #f1f4f4;
+      }
+
+      .system-overview {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 44px minmax(0, 1fr) 44px minmax(0, 1fr) 44px minmax(0, 1fr);
+        gap: 0;
+        margin-top: 44px;
+        align-items: stretch;
+      }
+
+      .system-node {
+        min-height: 142px;
+        padding: 24px;
+        border: 1px solid var(--line);
+        border-top-width: 4px;
+        border-radius: 6px;
+        background: #fff;
+      }
+
+      .system-node.node-forest {
+        border-top-color: var(--forest);
+      }
+
+      .system-node.node-teal {
+        border-top-color: var(--teal);
+      }
+
+      .system-node.node-coral {
+        border-top-color: var(--coral);
+      }
+
+      .system-node.node-violet {
+        border-top-color: var(--violet);
+      }
+
+      .system-node strong,
+      .system-node span {
+        display: block;
+      }
+
+      .system-node strong {
+        margin-bottom: 10px;
+        font-size: 1.08rem;
+      }
+
+      .system-node span {
+        color: var(--muted);
+        font-size: 0.86rem;
+        line-height: 1.55;
+      }
+
+      .system-arrow {
+        display: grid;
+        min-height: 142px;
+        place-items: center;
+        color: var(--coral);
+        font-size: 1.5rem;
+        font-weight: 900;
+      }
+
+      .system-lanes {
+        margin-top: 52px;
+        border-top: 2px solid var(--ink);
+      }
+
+      .system-lane {
+        display: grid;
+        grid-template-columns: 170px repeat(3, minmax(0, 1fr));
+        gap: 24px;
+        padding: 28px 0;
+        align-items: center;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .system-lane h3 {
+        margin: 0;
+        font-size: 1.12rem;
+      }
+
+      .lane-step {
+        position: relative;
+        min-width: 0;
+        padding-right: 34px;
+      }
+
+      .lane-step strong,
+      .lane-step span {
+        display: block;
+      }
+
+      .lane-step strong {
+        margin-bottom: 4px;
+        color: var(--forest);
+        font-size: 0.78rem;
+      }
+
+      .lane-step span {
+        color: #34444b;
+        font-size: 0.9rem;
+        line-height: 1.5;
+      }
+
+      .lane-step:not(:last-child)::after {
+        position: absolute;
+        top: 50%;
+        right: 7px;
+        content: "→";
+        color: var(--mustard);
+        font-size: 1.15rem;
+        font-weight: 900;
+        transform: translateY(-50%);
+      }
+
       .portfolio-list {
         margin-top: 36px;
       }
@@ -535,7 +650,7 @@
       .invitation-copy {
         position: relative;
         min-width: 0;
-        padding: 14px 58px 12px 14px;
+        padding: 14px;
       }
 
       .invitation-kicker {
@@ -579,23 +694,6 @@
       .invitation-details dd {
         margin: 0;
         color: #47535a;
-      }
-
-      .sample-qr {
-        position: absolute;
-        right: 11px;
-        bottom: 12px;
-        display: grid;
-        width: 40px;
-        height: 40px;
-        place-items: center;
-        border: 2px solid var(--forest);
-        color: var(--forest);
-        background: #fff;
-        font-size: 0.46rem;
-        font-weight: 900;
-        line-height: 1.1;
-        text-align: center;
       }
 
       .happiness-gallery {
@@ -736,7 +834,7 @@
         align-items: stretch;
       }
 
-      .sample-card,
+      .record-card,
       .site-preview {
         min-height: 500px;
         border: 1px solid var(--line);
@@ -746,25 +844,25 @@
         box-shadow: var(--shadow);
       }
 
-      .sample-card {
+      .record-card {
         padding: 30px;
       }
 
-      .sample-card h3 {
+      .record-card h3 {
         margin-bottom: 10px;
       }
 
-      .sample-note {
+      .record-note {
         margin: 0 0 24px;
         color: var(--muted);
         font-size: 0.88rem;
       }
 
-      .sample-rows {
+      .record-rows {
         margin: 0;
       }
 
-      .sample-rows div {
+      .record-rows div {
         display: grid;
         grid-template-columns: 108px minmax(0, 1fr);
         gap: 18px;
@@ -772,13 +870,13 @@
         border-top: 1px solid var(--line);
       }
 
-      .sample-rows dt {
+      .record-rows dt {
         color: var(--forest);
         font-size: 0.82rem;
         font-weight: 900;
       }
 
-      .sample-rows dd {
+      .record-rows dd {
         margin: 0;
         color: #33434c;
       }
@@ -1035,6 +1133,39 @@
           border-top: 0;
         }
 
+        .system-overview {
+          grid-template-columns: 1fr;
+        }
+
+        .system-arrow {
+          min-height: 42px;
+          transform: rotate(90deg);
+        }
+
+        .system-lane {
+          grid-template-columns: 1fr;
+          gap: 0;
+          padding: 24px 0;
+        }
+
+        .system-lane h3 {
+          padding-bottom: 14px;
+        }
+
+        .lane-step {
+          padding: 14px 0 34px;
+          border-top: 1px solid var(--line);
+        }
+
+        .lane-step:not(:last-child)::after {
+          top: auto;
+          right: auto;
+          bottom: 5px;
+          left: 0;
+          content: "↓";
+          transform: none;
+        }
+
         .portfolio-item {
           gap: 30px;
           padding: 42px 0;
@@ -1045,7 +1176,7 @@
         }
 
         .project-facts div,
-        .sample-rows div {
+        .record-rows div {
           grid-template-columns: 1fr;
           gap: 4px;
         }
@@ -1094,7 +1225,7 @@
           border-left: 0;
         }
 
-        .sample-card,
+        .record-card,
         .site-preview {
           min-height: auto;
         }
@@ -1133,6 +1264,7 @@
             <a href="#story">신앙 이야기</a>
             <a href="#philosophy">목회철학</a>
             <a href="#career">사역 경력</a>
+            <a href="#system">자료 시스템</a>
             <a href="#portfolio">포트폴리오</a>
             <a href="#care">돌봄</a>
             <a href="#lessons">배운 점</a>
@@ -1231,31 +1363,30 @@
               <h2>말씀 사역과 예배 인도의 축적</h2>
             </div>
             <p class="section-intro">
-              아래 기간과 수치는 현재 보유한 설교 원고와 예배 자료에서 확인되는 범위입니다.
-              실제 재직 기간과 역할은 공식 이력서에서 별도로 확인합니다.
+              보존된 설교 원고와 예배 자료의 양을 기준으로 지금까지 쌓아 온 말씀·예배 사역을 정리했습니다.
             </p>
           </div>
 
-          <div class="metrics" aria-label="확인 가능한 사역 자료 범위">
+          <div class="metrics" aria-label="사역 자료 축적량">
             <div class="metric">
               <span class="metric-name">아동부 말씀 사역</span>
-              <strong>2016–2026</strong>
-              <span>보존 설교 문서 421개</span>
+              <strong>421편</strong>
+              <span>2016–2026 · 보존 설교</span>
             </div>
             <div class="metric">
               <span class="metric-name">청소년부 말씀 사역</span>
-              <strong>2024–2026</strong>
-              <span>최종 설교 문서 51개</span>
+              <strong>51편</strong>
+              <span>2024–2026 · 보존 설교</span>
             </div>
             <div class="metric">
               <span class="metric-name">금요철야 찬양인도</span>
               <strong>27회</strong>
-              <span>2024.07–2026.05 확인 기록</span>
+              <span>2024.07–2026.05 · 보존 인도 기록</span>
             </div>
             <div class="metric">
               <span class="metric-name">장년 예배 설교·인도</span>
               <strong>7회</strong>
-              <span>2026.04–05 확인 자료</span>
+              <span>2026.04–05 · 보존 예배 자료</span>
             </div>
           </div>
 
@@ -1275,8 +1406,71 @@
                 <li>새벽기도·수요예배·금요철야예배 설교와 예배 인도</li>
                 <li>금요철야 찬양인도, 선곡과 콘티 준비</li>
                 <li>주보·예배 보고서·설교 녹취와 요약·부서 일정 관리</li>
-                <li>AI와 자동화 도구를 활용한 반복 업무 정리</li>
               </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section system-section" id="system">
+        <div class="wrap">
+          <div class="section-head">
+            <div>
+              <p class="section-label">자료 관리와 자동화</p>
+              <h2>기록을 쌓아<br>다음 사역에 다시 썼습니다</h2>
+            </div>
+            <p class="section-intro">
+              설교 원고와 녹취, PPT와 활동지, 선곡과 콘티, 주보와 보고서를 날짜·부서·주제별로 정리했습니다.
+              반복 확인은 자동화하고, 쌓인 자료는 설교와 교육, 예배 준비에서 다시 찾았습니다.
+            </p>
+          </div>
+
+          <div class="system-overview" aria-label="자료가 다음 사역으로 이어지는 네 단계">
+            <div class="system-node node-forest">
+              <strong>현장 자료</strong>
+              <span>설교 · 활동 · 찬양 · 행정</span>
+            </div>
+            <div class="system-arrow" aria-hidden="true">→</div>
+            <div class="system-node node-teal">
+              <strong>자동 정리</strong>
+              <span>파일명 · 날짜 · 중복 · 누락 확인</span>
+            </div>
+            <div class="system-arrow" aria-hidden="true">→</div>
+            <div class="system-node node-coral">
+              <strong>검색 가능한 기록</strong>
+              <span>본문 · 주제 · 부서별 자료 축적</span>
+            </div>
+            <div class="system-arrow" aria-hidden="true">→</div>
+            <div class="system-node node-violet">
+              <strong>다음 사역 준비</strong>
+              <span>설교 · PPT · 선곡 · 보고</span>
+            </div>
+          </div>
+
+          <div class="system-lanes">
+            <article class="system-lane">
+              <h3>말씀 사역</h3>
+              <div class="lane-step"><strong>현장</strong><span>설교 원고와 녹취</span></div>
+              <div class="lane-step"><strong>자료화</strong><span>본문·날짜·주제별 정리</span></div>
+              <div class="lane-step"><strong>다시 사용</strong><span>이전 설교·예화·핵심 문장 검색</span></div>
+            </article>
+            <article class="system-lane">
+              <h3>다음세대</h3>
+              <div class="lane-step"><strong>현장</strong><span>PPT·활동지·운영 기록</span></div>
+              <div class="lane-step"><strong>자료화</strong><span>연령·주차·말씀별 묶음</span></div>
+              <div class="lane-step"><strong>다시 사용</strong><span>2부 활동과 후속 대화 준비</span></div>
+            </article>
+            <article class="system-lane">
+              <h3>예배·찬양</h3>
+              <div class="lane-step"><strong>현장</strong><span>선곡·콘티·가사·예배 자료</span></div>
+              <div class="lane-step"><strong>자료화</strong><span>곡·본문·인도 날짜별 기록</span></div>
+              <div class="lane-step"><strong>다시 사용</strong><span>이전 선곡과 예배 흐름 준비</span></div>
+            </article>
+            <article class="system-lane">
+              <h3>반복 행정</h3>
+              <div class="lane-step"><strong>현장</strong><span>주보·보고서·일정·후속 연락</span></div>
+              <div class="lane-step"><strong>자료화</strong><span>템플릿·체크 항목·자동화</span></div>
+              <div class="lane-step"><strong>다시 사용</strong><span>누락 확인과 다음 일정 관리</span></div>
             </article>
           </div>
         </div>
@@ -1297,16 +1491,16 @@
 
           <div class="portfolio-list">
             <article class="portfolio-item">
-              <div class="garden-artifacts" aria-label="말씀으로 채색된 정원 인쇄물과 공개용 초대장">
+              <div class="garden-artifacts" aria-label="말씀으로 채색된 정원 인쇄물과 초대장">
                 <figure class="garden-board">
                   <img src="assets/garden-board.png" alt="말씀으로 채색된 정원 A3 정원판" loading="lazy">
                   <figcaption>A3 정원판</figcaption>
                 </figure>
                 <figure>
-                  <div class="invitation-sample" role="img" aria-label="교회명과 실제 일정을 일반 정보로 바꾼 공개용 초대장 샘플">
+                  <div class="invitation-sample" role="img" aria-label="말씀으로 채색된 정원 초대장">
                     <img src="assets/garden-illustration.png" alt="예수님과 아이가 정원길을 걷는 손그림">
                     <div class="invitation-copy">
-                      <p class="invitation-kicker">PUBLIC SAMPLE</p>
+                      <p class="invitation-kicker">INVITATION</p>
                       <h4>말씀으로 채색된 정원</h4>
                       <p>함께 예배한 시간을 축복으로 물들이는 하루</p>
                       <dl class="invitation-details">
@@ -1314,10 +1508,9 @@
                         <div><dt>장소</dt><dd>교회 교육공간</dd></div>
                         <div><dt>대상</dt><dd>어린이와 친구</dd></div>
                       </dl>
-                      <span class="sample-qr" aria-hidden="true">SAMPLE<br>QR</span>
                     </div>
                   </div>
-                  <figcaption>교회명·날짜·장소·QR을 바꾼 공개용 초대장</figcaption>
+                  <figcaption>정원 일러스트로 만든 초대장 시안</figcaption>
                 </figure>
                 <figure class="garden-stickers">
                   <img src="assets/garden-stickers.png" alt="말씀과 축복 문구를 담은 정원 스티커 모음" loading="lazy">
@@ -1335,7 +1528,7 @@
                   <div><dt>말씀 주제</dt><dd>하나님께서 함께하시면 약해도 믿음으로 시작할 수 있음</dd></div>
                   <div><dt>직접 제작</dt><dd>14장 PPT, A3 정원판, 환송 서신, 축복 스티커, 미션 팻말</dd></div>
                   <div><dt>현장 진행</dt><dd>모험길 안내 → 세 가지 미션 → 축복 열매 → A3 정원 완성</dd></div>
-                  <div><dt>공개 기준</dt><dd>교회명·아이 실명·결과 사진은 제외하고 제작물과 공개용 사본만 사용했습니다.</dd></div>
+                  <div><dt>배운 점</dt><dd>그림과 몸동작, 선택 활동이 말이 적은 아이도 자연스럽게 참여하는 통로가 되었습니다.</dd></div>
                 </dl>
               </div>
             </article>
@@ -1352,12 +1545,12 @@
                   <div><dt>말씀 주제</dt><dd>말씀을 감정, 관계, 학업과 진로에 연결해 보기</dd></div>
                   <div><dt>직접 제작</dt><dd>9개 질문 영역, 말씀 방향, 이번 주 작은 선택을 담은 인쇄용 활동지</dd></div>
                   <div><dt>현장 진행</dt><dd>개인 작성 → 말씀 선택 → 원하는 범위의 나눔 → 예배 후 대화</dd></div>
-                  <div><dt>공개 기준</dt><dd>학생이 작성한 결과물은 사용하지 않고 빈 양식만 공개했습니다.</dd></div>
+                  <div><dt>배운 점</dt><dd>한 장의 활동지가 학업·관계·감정·진로를 구체적으로 듣는 예배 후 대화로 이어졌습니다.</dd></div>
                 </dl>
               </div>
               <figure class="document-preview">
                 <img src="assets/youth-body-map.png" alt="머리, 눈, 귀, 심장, 손, 발, 입과 말씀 선택을 담은 내 몸 지도 빈 활동지" loading="lazy">
-                <figcaption>학생 작성 내용이 없는 공개용 빈 활동지</figcaption>
+                <figcaption>생각·관계·감정·말씀을 한 장에 담은 활동지</figcaption>
               </figure>
             </article>
 
@@ -1482,30 +1675,30 @@
           </div>
 
           <div class="care-grid">
-            <article class="sample-card">
-              <p class="tool-label">공개용 가상 샘플</p>
-              <h3>A학생 관리카드</h3>
-              <p class="sample-note">실제 아이의 이름·학교·보호자·연락처·민감한 기록은 공개하지 않습니다.</p>
-              <dl class="sample-rows">
-                <div><dt>관심사</dt><dd>그림, 음악, 친구와 함께하는 팀 활동</dd></div>
-                <div><dt>연결 접점</dt><dd>2부 활동에서 직접 고른 카드와 한 문장</dd></div>
-                <div><dt>맡은 역할</dt><dd>예배 PPT 보조, 활동 준비물 확인</dd></div>
-                <div><dt>교사 협력</dt><dd>예배 전 역할을 다시 안내하고 마친 뒤 짧게 대화</dd></div>
-                <div><dt>다음 확인</dt><dd>지난주 활동을 먼저 언급하고 이번 주 관심사를 묻기</dd></div>
+            <article class="record-card">
+              <p class="tool-label">예배에서 다음 만남까지</p>
+              <h3>돌봄 기록 카드</h3>
+              <p class="record-note">예배와 활동에서 나온 말과 관심사를 날짜별로 남기고 다음 대화와 역할까지 이어서 관리했습니다.</p>
+              <dl class="record-rows">
+                <div><dt>예배와 활동</dt><dd>나온 말과 참여 방식을 기록</dd></div>
+                <div><dt>관심사</dt><dd>좋아한 활동과 이어진 주제</dd></div>
+                <div><dt>말씀 연결</dt><dd>함께 나눈 말씀과 기도 제목</dd></div>
+                <div><dt>교사 협력</dt><dd>다음 예배의 역할과 이어갈 대화</dd></div>
+                <div><dt>다음 만남</dt><dd>다시 물을 내용과 후속 일정</dd></div>
               </dl>
             </article>
 
-            <article class="site-preview" aria-label="가상 교회 아동부 소개 페이지 샘플">
+            <article class="site-preview" aria-label="아동부 소개 페이지 화면">
               <div class="browser-bar" aria-hidden="true"><span></span><span></span><span></span></div>
               <div class="preview-visual"></div>
               <div class="preview-copy">
-                <p class="tool-label">첫 방문 가정을 위한 안내 화면</p>
-                <h3>지역교회 아동부</h3>
-                <p>방문 전에 예배 흐름과 첫날의 과정을 이해하도록 실제 소개 페이지를 비식별 샘플로 다시 구성했습니다.</p>
+                <p class="tool-label">첫 방문 가정을 위한 안내</p>
+                <h3>처음 만나는 아동부</h3>
+                <p>예배 전 준비부터 2부 활동, 첫 방문의 자리 안내와 다음 연결까지 한 화면에 정리했습니다.</p>
                 <div class="preview-facts">
-                  <div><strong>주일 예배</strong><span>시간·장소 비공개</span></div>
-                  <div><strong>진행 흐름</strong><span>찬양 · 말씀 · 2부 활동</span></div>
-                  <div><strong>첫 방문</strong><span>자리 안내 · 작은 역할</span></div>
+                  <div><strong>예배 흐름</strong><span>찬양 · 말씀 · 2부 활동</span></div>
+                  <div><strong>첫 방문</strong><span>자리 안내 · 이름 기억</span></div>
+                  <div><strong>다음 연결</strong><span>새친구 안내 · 다음 활동</span></div>
                 </div>
               </div>
             </article>
@@ -1517,36 +1710,36 @@
         <div class="wrap">
           <div class="section-head">
             <div>
-              <p class="section-label">사역에서 확인한 변화와 배운 점</p>
-              <h2>숫자보다 오래 남은<br>작은 변화들</h2>
+              <p class="section-label">사역에서 배운 운영의 원칙</p>
+              <h2>한마디를 기록하고<br>다음 만남으로 이어 왔습니다</h2>
             </div>
             <p class="section-intro">
-              출석 숫자만으로는 다음세대 사역의 변화를 충분히 말하기 어렵습니다. 대신 학생이 자기 방식으로
-              참여하고, 한마디가 대화와 기도로 이어지고, 부족했던 진행을 다음 주에 고친 장면을 기록했습니다.
+              활동에서 나온 말은 다음 대화와 기도로 이어 갔고, 진행 중 발견한 점은 다음 주 규칙과 자료에
+              바로 반영했습니다.
             </p>
           </div>
 
           <div class="lessons-grid">
             <article class="lesson">
-              <h3>참여 방식은 하나가 아니었습니다</h3>
-              <p>공개 발표뿐 아니라 익명 응답, 활동지, 팀 미션, PPT 보조처럼 각자가 들어올 수 있는 여러 통로를 마련했습니다.</p>
+              <h3>여러 참여 통로를 마련했습니다</h3>
+              <p>익명 응답, 활동지, 팀 미션, PPT 보조 등 각자가 참여할 수 있는 여러 통로를 마련했습니다.</p>
             </article>
             <article class="lesson">
-              <h3>2부 활동은 돌봄의 접점이 되었습니다</h3>
-              <p>학업과 관계, 입시와 진로에 관한 표현이 활동에서 나왔고, 예배 후 짧은 대화와 기도 제목으로 이어졌습니다.</p>
+              <h3>2부 활동을 대화의 접점으로 삼았습니다</h3>
+              <p>활동지와 선택 질문에서 나온 학업, 입시, 관계, 진로에 관한 생각을 예배 후 대화와 기도 제목으로 이어 갔습니다.</p>
             </article>
             <article class="lesson">
-              <h3>기억하고 다시 묻는 일이 중요했습니다</h3>
-              <p>활동에서 나온 한마디를 기록하고 다음 주에 다시 안부를 묻고 작은 역할로 연결하는 일을 중요하게 여겼습니다.</p>
+              <h3>한마디를 다음 만남까지 이어 갔습니다</h3>
+              <p>활동에서 나온 한마디를 기록하고 다음 주에 다시 안부를 물으며 작은 역할과 교사 협력으로 연결했습니다.</p>
             </article>
             <article class="lesson">
-              <h3>부족한 진행도 다음 기획의 자료가 되었습니다</h3>
-              <p>규칙을 줄이고, 마지막에 붙잡을 말씀을 먼저 정하고, 교사와 역할을 미리 나누는 방식으로 매주 보완했습니다.</p>
+              <h3>진행 기록을 다음 기획에 반영했습니다</h3>
+              <p>활동의 규칙과 시간, 질문 순서와 교사 역할을 기록하고 다음 활동의 준비 방식에 바로 반영했습니다.</p>
             </article>
           </div>
 
           <p class="lesson-quote">
-            프로그램을 잘 마쳤다는 사실보다, 활동에서 나온 한마디를 다음 주까지 기억하고 다시 묻는 일이 더 중요했습니다.
+            활동에서 나온 한마디를 기억하고 다시 묻는 일은 다음세대 사역을 이어 가는 중요한 출발점이었습니다.
           </p>
         </div>
       </section>

@@ -523,6 +523,98 @@
         object-position: center !important;
       }
 
+      .image-viewer {
+        width: min(1120px, calc(100vw - 48px));
+        max-width: none;
+        max-height: calc(100svh - 48px);
+        margin: auto;
+        padding: 0;
+        overflow: hidden;
+        border: 0;
+        border-radius: 8px;
+        color: #fff;
+        background: #101817;
+        box-shadow: 0 28px 90px rgba(0, 0, 0, 0.45);
+      }
+
+      .image-viewer::backdrop {
+        background: rgba(8, 15, 14, 0.78);
+        backdrop-filter: blur(4px);
+      }
+
+      .image-viewer-shell {
+        display: grid;
+        grid-template-rows: auto minmax(0, 1fr) auto;
+        max-height: calc(100svh - 48px);
+      }
+
+      .image-viewer-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 12px 14px 12px 20px;
+        background: #172320;
+      }
+
+      .image-viewer-title {
+        margin: 0;
+        font-size: 0.96rem;
+        font-weight: 800;
+      }
+
+      .image-viewer-close {
+        display: grid;
+        place-items: center;
+        flex: 0 0 auto;
+        width: 44px;
+        height: 44px;
+        padding: 0;
+        border: 1px solid rgba(255, 255, 255, 0.32);
+        border-radius: 50%;
+        color: #fff;
+        background: transparent;
+        font: inherit;
+        font-size: 1.75rem;
+        line-height: 1;
+        cursor: pointer;
+      }
+
+      .image-viewer-close:hover,
+      .image-viewer-close:focus-visible {
+        color: #17242b;
+        background: #fff;
+        outline: none;
+      }
+
+      .image-viewer-stage {
+        min-height: 0;
+        overflow: auto;
+        padding: 18px;
+        background: #0d1413;
+      }
+
+      .image-viewer-stage img {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-height: calc(100svh - 170px);
+        margin: auto;
+        object-fit: contain;
+      }
+
+      .image-viewer-caption {
+        margin: 0;
+        padding: 12px 20px 16px;
+        color: #dce5e2;
+        background: #172320;
+        font-size: 0.9rem;
+      }
+
+      body.viewer-open {
+        overflow: hidden;
+      }
+
       .evidence-card.is-wide .evidence-visual {
         background: #f7f2f5;
       }
@@ -1238,6 +1330,23 @@
           font-size: 1.4rem;
         }
 
+        .image-viewer {
+          width: calc(100vw - 20px);
+          max-height: calc(100svh - 20px);
+        }
+
+        .image-viewer-shell {
+          max-height: calc(100svh - 20px);
+        }
+
+        .image-viewer-stage {
+          padding: 10px;
+        }
+
+        .image-viewer-stage img {
+          max-height: calc(100svh - 145px);
+        }
+
         .hero-lead {
           font-size: 1.08rem;
         }
@@ -1576,17 +1685,33 @@
           <div class="section-head">
             <div>
               <p class="section-label">말씀과 예배의 현장</p>
-              <h2>한 편의 말씀에서<br>한 번의 예배까지 준비했습니다</h2>
+              <h2>말씀의 본질을 지키며<br>각 세대의 삶에 닿도록 전했습니다</h2>
             </div>
             <p class="section-intro">
-              장년 설교의 본문과 구조를 세우고, 기도와 찬송, 성경봉독과 말씀 소개가 이어지는 예배 인도문을
-              작성했습니다. 금요철야에서는 선곡과 키, BPM과 기도 연결까지 한 흐름으로 준비했습니다.
+              아동에게는 익숙한 선택과 장면으로, 장년에게는 삶을 돌아보는 질문과 구조로 말씀을 풀었습니다.
+              금요철야에서는 찬양의 흐름이 말씀 앞의 기도와 고백으로 이어지도록 선곡과 인도를 준비했습니다.
             </p>
           </div>
 
           <div class="evidence-grid">
+            <article class="evidence-card accent-teal">
+              <a class="evidence-visual" href="assets/children-sermon-page.png" title="아동부 설교 원고 크게 보기">
+                <img src="assets/children-sermon-page.png" alt="사마리아 성과 광야 길의 선택 질문에서 시작해 성령의 인도하심과 예수님의 복음으로 이어지는 아동부 설교 원고" loading="lazy">
+              </a>
+              <div class="evidence-copy">
+                <p class="evidence-type">아동부 · 설교</p>
+                <h3>한 걸음 가까이 간 빌립</h3>
+                <p>아이에게 익숙한 두 장소의 선택 질문으로 시작해, 성령의 인도하심과 한 사람에게 다가가 예수님을 전한 본문의 중심으로 이어 갔습니다.</p>
+                <dl class="evidence-facts">
+                  <div><dt>담당</dt><dd>질문 · 시각 장면 · 원고 · 설교</dd></div>
+                  <div><dt>본문</dt><dd>사도행전 8장 29–35절</dd></div>
+                  <div><dt>활용</dt><dd>아동부 말씀과 삶의 결단</dd></div>
+                </dl>
+              </div>
+            </article>
+
             <article class="evidence-card accent-coral">
-              <a class="evidence-visual" href="assets/adult-sermon-page.png" target="_blank" rel="noopener" title="장년 예배 설교 원고 크게 보기">
+              <a class="evidence-visual" href="assets/adult-sermon-page.png" title="장년 예배 설교 원고 크게 보기">
                 <img src="assets/adult-sermon-page.png" alt="요한복음 14장 18절을 본문으로 구성한 장년 예배 설교 원고 한 면" loading="lazy">
               </a>
               <div class="evidence-copy">
@@ -1601,30 +1726,14 @@
               </div>
             </article>
 
-            <article class="evidence-card accent-violet">
-              <a class="evidence-visual" href="assets/worship-leading-page.png" target="_blank" rel="noopener" title="예배 인도문 크게 보기">
-                <img src="assets/worship-leading-page.png" alt="통성기도, 찬송, 성경봉독과 말씀 소개를 한 흐름으로 정리한 예배 인도문" loading="lazy">
-              </a>
-              <div class="evidence-copy">
-                <p class="evidence-type">장년 예배 · 인도</p>
-                <h3>주일저녁예배 인도문</h3>
-                <p>기도와 찬송, 성경봉독과 말씀 소개가 끊기지 않도록 예배 전체의 언어와 순서를 작성했습니다.</p>
-                <dl class="evidence-facts">
-                  <div><dt>담당</dt><dd>통성기도 · 찬송 · 봉독 · 말씀 소개</dd></div>
-                  <div><dt>자료</dt><dd>주일저녁예배 인도문</dd></div>
-                  <div><dt>활용</dt><dd>예배 진행과 순서 연결</dd></div>
-                </dl>
-              </div>
-            </article>
-
             <article class="evidence-card accent-mustard">
-              <a class="evidence-visual" href="assets/friday-praise-setlist-page.png" target="_blank" rel="noopener" title="금요철야 찬양 콘티 크게 보기">
+              <a class="evidence-visual" href="assets/friday-praise-setlist-page.png" title="금요철야 찬양 콘티 크게 보기">
                 <img src="assets/friday-praise-setlist-page.png" alt="선곡, 키, BPM과 기도 연결을 정리한 금요철야 찬양 콘티" loading="lazy">
               </a>
               <div class="evidence-copy">
                 <p class="evidence-type">금요철야 · 찬양인도</p>
                 <h3>금요철야 찬양 콘티</h3>
-                <p>감사의 고백에서 빠른 찬양의 고조를 지나 느린 찬양과 통성기도로 이어지는 흐름을 준비했습니다.</p>
+                <p>찬양으로 마음을 열고 곡의 속도와 조성을 이어, 느린 찬양과 통성기도로 자연스럽게 나아가는 흐름을 준비했습니다.</p>
                 <dl class="evidence-facts">
                   <div><dt>담당</dt><dd>선곡 · 키 · BPM · 진행 순서</dd></div>
                   <div><dt>자료</dt><dd>2026.06.26 최종 콘티 6곡</dd></div>
@@ -1651,7 +1760,7 @@
 
           <div class="evidence-grid">
             <article class="evidence-card accent-forest">
-              <a class="evidence-visual" href="assets/garden-board.png" target="_blank" rel="noopener" title="말씀으로 채색된 정원 크게 보기">
+              <a class="evidence-visual" href="assets/garden-board.png" title="말씀으로 채색된 정원 크게 보기">
                 <img src="assets/garden-board.png" alt="함께 예배한 시간을 축복으로 물들이는 말씀으로 채색된 정원 A3 활동판" loading="lazy">
               </a>
               <div class="evidence-copy">
@@ -1667,7 +1776,7 @@
             </article>
 
             <article class="evidence-card accent-violet">
-              <a class="evidence-visual" href="assets/youth-body-map.png" target="_blank" rel="noopener" title="내 몸 지도 활동지 크게 보기">
+              <a class="evidence-visual" href="assets/youth-body-map.png" title="내 몸 지도 활동지 크게 보기">
                 <img src="assets/youth-body-map.png" alt="생각, 시선, 들은 말, 감정과 생활을 적는 청소년부 내 몸 지도 활동지" loading="lazy">
               </a>
               <div class="evidence-copy">
@@ -1684,10 +1793,10 @@
 
             <article class="evidence-card accent-coral is-wide">
               <div class="evidence-visual evidence-duo" aria-label="오늘의 상태메시지 PPT 대표 화면 두 장">
-                <a href="assets/ppt-status-word-dm.png" target="_blank" rel="noopener" title="말씀 DM 활동 화면 크게 보기">
+                <a href="assets/ppt-status-word-dm.png" title="말씀 DM 활동 화면 크게 보기">
                   <img src="assets/ppt-status-word-dm.png" alt="불안 알림을 잠재울 말씀 스티커를 고르는 말씀 DM 활동 화면" loading="lazy">
                 </a>
-                <a href="assets/ppt-status-closing.png" target="_blank" rel="noopener" title="오늘의 상태메시지 마무리 화면 크게 보기">
+                <a href="assets/ppt-status-closing.png" title="오늘의 상태메시지 마무리 화면 크게 보기">
                   <img src="assets/ppt-status-closing.png" alt="주신 말씀을 간직하라는 오늘의 상태메시지 마무리 화면" loading="lazy">
                 </a>
               </div>
@@ -1721,7 +1830,7 @@
 
           <div class="evidence-grid">
             <article class="evidence-card accent-teal">
-              <a class="evidence-visual" href="assets/bulletin-automation-page.png" target="_blank" rel="noopener" title="주보 초안 자동화 흐름 크게 보기">
+              <a class="evidence-visual" href="assets/bulletin-automation-page.png" title="주보 초안 자동화 흐름 크게 보기">
                 <img src="assets/bulletin-automation-page.png" alt="말씀과 칼럼, 교독과 찬송, 예배위원 정보를 복붙용 주보 초안과 오타점검으로 잇는 자동화 흐름" loading="lazy">
               </a>
               <div class="evidence-copy">
@@ -1737,7 +1846,7 @@
             </article>
 
             <article class="evidence-card accent-coral">
-              <a class="evidence-visual" href="assets/children-site-automation-page.png" target="_blank" rel="noopener" title="아동부 홈페이지 주간 갱신 흐름 크게 보기">
+              <a class="evidence-visual" href="assets/children-site-automation-page.png" title="아동부 홈페이지 주간 갱신 흐름 크게 보기">
                 <img src="assets/children-site-automation-page.png" alt="오는 주 설교와 공과, 2부 활동을 첫 방문 가정의 홈페이지 안내로 잇는 주간 갱신 흐름" loading="lazy">
               </a>
               <div class="evidence-copy">
@@ -1753,7 +1862,7 @@
             </article>
 
             <article class="evidence-card accent-violet">
-              <a class="evidence-visual" href="assets/sermon-automation-page.png" target="_blank" rel="noopener" title="설교 녹취와 말씀 자료화 흐름 크게 보기">
+              <a class="evidence-visual" href="assets/sermon-automation-page.png" title="설교 녹취와 말씀 자료화 흐름 크게 보기">
                 <img src="assets/sermon-automation-page.png" alt="설교 음성을 문맥과 성경으로 교정하고 사람 검수, 요약과 다음 말씀 준비로 잇는 자료화 흐름" loading="lazy">
               </a>
               <div class="evidence-copy">
@@ -1849,5 +1958,59 @@
         <span>Next Generation Ministry · Worship · Care</span>
       </div>
     </footer>
+
+    <dialog class="image-viewer" id="image-viewer" aria-labelledby="image-viewer-title">
+      <div class="image-viewer-shell">
+        <div class="image-viewer-bar">
+          <p class="image-viewer-title" id="image-viewer-title">이미지 크게 보기</p>
+          <button class="image-viewer-close" type="button" aria-label="이미지 닫기" title="닫기">&times;</button>
+        </div>
+        <div class="image-viewer-stage">
+          <img id="image-viewer-image" src="" alt="">
+        </div>
+        <p class="image-viewer-caption" id="image-viewer-caption"></p>
+      </div>
+    </dialog>
+
+    <script>
+      const viewer = document.querySelector("#image-viewer");
+      const viewerImage = document.querySelector("#image-viewer-image");
+      const viewerTitle = document.querySelector("#image-viewer-title");
+      const viewerCaption = document.querySelector("#image-viewer-caption");
+      const viewerClose = document.querySelector(".image-viewer-close");
+      const viewerLinks = document.querySelectorAll(".evidence-visual[href], .evidence-duo a[href]");
+
+      viewerLinks.forEach((link) => {
+        link.removeAttribute("target");
+        link.removeAttribute("rel");
+        link.setAttribute("aria-haspopup", "dialog");
+
+        link.addEventListener("click", (event) => {
+          event.preventDefault();
+          const sourceImage = link.querySelector("img");
+          const cardTitle = link.closest(".evidence-card")?.querySelector(".evidence-copy h3")?.textContent.trim();
+
+          viewerImage.src = link.href;
+          viewerImage.alt = sourceImage?.alt || cardTitle || "포트폴리오 이미지";
+          viewerTitle.textContent = cardTitle || "이미지 크게 보기";
+          viewerCaption.textContent = sourceImage?.alt || "";
+          document.body.classList.add("viewer-open");
+          viewer.showModal();
+        });
+      });
+
+      const closeViewer = () => viewer.close();
+
+      viewerClose.addEventListener("click", closeViewer);
+      viewer.addEventListener("click", (event) => {
+        if (event.target === viewer) {
+          closeViewer();
+        }
+      });
+      viewer.addEventListener("close", () => {
+        document.body.classList.remove("viewer-open");
+        viewerImage.src = "";
+      });
+    </script>
   </body>
 </html>

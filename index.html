@@ -6,12 +6,12 @@
     <title>권지훈 목사 | 말씀과 다음세대를 잇는 목회</title>
     <meta
       name="description"
-      content="말씀을 삶으로 이어 다음세대 한 사람을 세워 온 권지훈 목사의 신앙 배경, 목회 철학, 사역 경력과 포트폴리오입니다."
+      content="장년 설교와 예배 인도, 다음세대 교육 설계, 교회 운영과 돌봄을 이어 온 권지훈 목사의 신앙 배경과 사역 포트폴리오입니다."
     >
     <meta property="og:title" content="권지훈 목사 | 말씀과 다음세대를 잇는 목회">
     <meta
       property="og:description"
-      content="설교와 시각자료, 2부 활동과 후속 돌봄을 하나의 흐름으로 이어 온 다음세대 사역 기록."
+      content="장년 설교와 예배 인도, 다음세대 교육 설계, 교회 운영과 돌봄을 함께 이어 온 사역 기록."
     >
     <meta property="og:type" content="website">
     <meta property="og:image" content="assets/ministry-hero.png">
@@ -443,6 +443,136 @@
 
       .system-section {
         background: #f1f4f4;
+      }
+
+      .evidence-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px;
+        margin-top: 48px;
+      }
+
+      .evidence-card {
+        min-width: 0;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-top: 5px solid var(--forest);
+        border-radius: 6px;
+        background: #fff;
+        box-shadow: 0 16px 36px rgba(27, 43, 48, 0.1);
+      }
+
+      .evidence-card.accent-coral {
+        border-top-color: var(--coral);
+      }
+
+      .evidence-card.accent-teal {
+        border-top-color: var(--teal);
+      }
+
+      .evidence-card.accent-mustard {
+        border-top-color: var(--mustard);
+      }
+
+      .evidence-card.accent-violet {
+        border-top-color: var(--violet);
+      }
+
+      .evidence-visual {
+        display: block;
+        width: 100%;
+        aspect-ratio: 4 / 5;
+        overflow: hidden;
+        border-bottom: 1px solid var(--line);
+        background: #eef2f1;
+      }
+
+      .evidence-visual:focus-visible {
+        outline: 4px solid var(--mustard);
+        outline-offset: -4px;
+      }
+
+      .evidence-visual img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center top;
+      }
+
+      .evidence-card.is-wide .evidence-visual {
+        background: #f7f2f5;
+      }
+
+      .evidence-card.is-wide .evidence-visual img {
+        object-position: center;
+      }
+
+      .evidence-copy {
+        padding: 24px;
+      }
+
+      .evidence-type {
+        margin: 0 0 10px;
+        color: var(--coral);
+        font-size: 0.82rem;
+        font-weight: 900;
+      }
+
+      .accent-forest .evidence-type {
+        color: var(--forest);
+      }
+
+      .accent-teal .evidence-type {
+        color: var(--teal);
+      }
+
+      .accent-mustard .evidence-type {
+        color: #9a6913;
+      }
+
+      .accent-violet .evidence-type {
+        color: var(--violet);
+      }
+
+      .evidence-copy h3 {
+        margin-bottom: 13px;
+        font-size: 1.4rem;
+      }
+
+      .evidence-copy > p:not(.evidence-type) {
+        min-height: 7.1em;
+        margin: 0 0 20px;
+        color: var(--muted);
+        font-size: 0.96rem;
+        line-height: 1.7;
+      }
+
+      .evidence-facts {
+        display: grid;
+        gap: 0;
+        margin: 0;
+      }
+
+      .evidence-facts div {
+        display: grid;
+        grid-template-columns: 56px minmax(0, 1fr);
+        gap: 12px;
+        padding: 10px 0;
+        border-top: 1px solid var(--line);
+      }
+
+      .evidence-facts dt {
+        color: var(--forest);
+        font-size: 0.8rem;
+        font-weight: 900;
+      }
+
+      .evidence-facts dd {
+        margin: 0;
+        color: #34434b;
+        font-size: 0.86rem;
+        line-height: 1.55;
       }
 
       .system-overview {
@@ -1031,6 +1161,7 @@
         .philosophy-grid,
         .metrics,
         .career-groups,
+        .evidence-grid,
         .lessons-grid {
           grid-template-columns: repeat(2, minmax(0, 1fr));
         }
@@ -1096,6 +1227,7 @@
         .philosophy-grid,
         .metrics,
         .career-groups,
+        .evidence-grid,
         .happiness-gallery,
         .garden-artifacts,
         .deck-gallery,
@@ -1238,12 +1370,12 @@
           <p class="eyebrow">말씀 · 다음세대 · 예배와 돌봄</p>
           <h1>권지훈 목사</h1>
           <p class="hero-lead">
-            말씀을 삶으로 이어 다음세대 한 사람을 세우는 일을 중심에 두고 사역해 왔습니다. 설교와
-            시각자료, 2부 활동과 후속 돌봄을 하나의 흐름으로 연결했습니다.
+            말씀과 예배의 본질을 지키며 장년 예배와 다음세대 사역, 이를 뒷받침하는 교회 운영을 한 흐름으로
+            이어 왔습니다. 설교와 교육, 행정의 기록을 다음 말씀과 돌봄으로 연결했습니다.
           </p>
           <div class="hero-actions">
             <a class="button primary" href="#philosophy">목회철학</a>
-            <a class="button" href="#projects">사역 포트폴리오</a>
+            <a class="button" href="#worship-portfolio">사역 포트폴리오</a>
           </div>
         </div>
       </div>
@@ -1407,236 +1539,196 @@
         </div>
       </section>
 
-      <section class="section alt" id="projects">
+      <section class="section evidence-section" id="worship-portfolio">
         <div class="wrap">
           <div class="section-head">
             <div>
-              <p class="section-label">교육 설계 사례</p>
-              <h2>말씀을 삶으로 연결한 교육 설계</h2>
+              <p class="section-label">말씀과 예배의 현장</p>
+              <h2>한 편의 말씀에서<br>한 번의 예배까지 준비했습니다</h2>
             </div>
             <p class="section-intro">
-              실제로 만든 인쇄물과 활동지, PPT 디자인을 중심으로 말씀의 주제와 기획 의도, 현장 진행과
-              그 과정에서 배운 점을 함께 소개합니다.
+              장년 설교의 본문과 구조를 세우고, 기도와 찬송, 성경봉독과 말씀 소개가 이어지는 예배 인도문을
+              작성했습니다. 금요철야에서는 선곡과 키, BPM과 기도 연결까지 한 흐름으로 준비했습니다.
             </p>
           </div>
 
-          <div class="portfolio-list">
-            <article class="portfolio-item">
-              <div class="garden-artifacts" aria-label="말씀으로 채색된 정원 인쇄물과 초대장">
-                <figure class="garden-board">
-                  <img src="assets/garden-board.png" alt="말씀으로 채색된 정원 A3 정원판" loading="lazy">
-                  <figcaption>A3 정원판</figcaption>
-                </figure>
-                <figure>
-                  <div class="invitation-sample" role="img" aria-label="말씀으로 채색된 정원 초대장">
-                    <img src="assets/garden-illustration.png" alt="예수님과 아이가 정원길을 걷는 손그림">
-                    <div class="invitation-copy">
-                      <p class="invitation-kicker">INVITATION</p>
-                      <h4>말씀으로 채색된 정원</h4>
-                      <p>함께 예배한 시간을 축복으로 물들이는 하루</p>
-                      <dl class="invitation-details">
-                        <div><dt>일시</dt><dd>주일 오전</dd></div>
-                        <div><dt>장소</dt><dd>교회 교육공간</dd></div>
-                        <div><dt>대상</dt><dd>어린이와 친구</dd></div>
-                      </dl>
-                    </div>
-                  </div>
-                  <figcaption>정원 일러스트로 만든 초대장 시안</figcaption>
-                </figure>
-                <figure class="garden-stickers">
-                  <img src="assets/garden-stickers.png" alt="말씀과 축복 문구를 담은 정원 스티커 모음" loading="lazy">
-                  <figcaption>정원판을 완성하는 말씀·축복 스티커</figcaption>
-                </figure>
-              </div>
-              <div class="project-copy">
-                <p class="project-label">아동부 2부 활동 · 14장 PPT · A3 인쇄물</p>
-                <h3>말씀으로 채색된 정원</h3>
-                <p>
-                  한 아이의 환송과 새친구 초청을 그림 제목 고르기, 포즈 미션, 텔레파시 퀴즈와 축복
-                  스티커로 연결했습니다. 모두가 함께 웃고 축복하며 A3 정원을 완성했습니다.
-                </p>
-                <dl class="project-facts">
-                  <div><dt>말씀 주제</dt><dd>하나님께서 함께하시면 약해도 믿음으로 시작할 수 있음</dd></div>
-                  <div><dt>직접 제작</dt><dd>14장 PPT, A3 정원판, 환송 서신, 축복 스티커, 미션 팻말</dd></div>
-                  <div><dt>현장 진행</dt><dd>모험길 안내 → 세 가지 미션 → 축복 열매 → A3 정원 완성</dd></div>
-                  <div><dt>배운 점</dt><dd>그림과 몸동작, 선택 활동이 말이 적은 아이도 자연스럽게 참여하는 통로가 되었습니다.</dd></div>
+          <div class="evidence-grid">
+            <article class="evidence-card accent-coral">
+              <a class="evidence-visual" href="assets/adult-sermon-page.png" target="_blank" rel="noopener" title="장년 예배 설교 원고 크게 보기">
+                <img src="assets/adult-sermon-page.png" alt="요한복음 14장 18절을 본문으로 구성한 장년 예배 설교 원고 한 면" loading="lazy">
+              </a>
+              <div class="evidence-copy">
+                <p class="evidence-type">장년 예배 · 설교</p>
+                <h3>수요예배 설교 원고</h3>
+                <p>질문으로 시작해 고아처럼 살아가는 방식과 아버지 하나님의 시선, 자녀 된 삶의 여유로 말씀의 흐름을 구성했습니다.</p>
+                <dl class="evidence-facts">
+                  <div><dt>담당</dt><dd>본문 연구 · 구조 · 원고 · 설교</dd></div>
+                  <div><dt>본문</dt><dd>요한복음 14장 18절</dd></div>
+                  <div><dt>활용</dt><dd>수요예배 전체 진행과 장년 설교</dd></div>
                 </dl>
               </div>
             </article>
 
-            <article class="portfolio-item text-first">
-              <div class="project-copy">
-                <p class="project-label">청소년부 2부 활동 · 인쇄용 활동지 · 예배 후 대화</p>
-                <h3>내 몸 지도 그려보기</h3>
-                <p>
-                  머리·눈·귀·심장·손·발·입을 따라 최근의 생각과 시선, 들은 말과 머무는 곳을 적었습니다.
-                  마지막에는 오늘 붙잡을 말씀 한 문장과 이번 주의 작은 선택을 남겼습니다.
-                </p>
-                <dl class="project-facts">
-                  <div><dt>말씀 주제</dt><dd>말씀을 감정, 관계, 학업과 진로에 연결해 보기</dd></div>
-                  <div><dt>직접 제작</dt><dd>9개 질문 영역, 말씀 방향, 이번 주 작은 선택을 담은 인쇄용 활동지</dd></div>
-                  <div><dt>현장 진행</dt><dd>개인 작성 → 말씀 선택 → 원하는 범위의 나눔 → 예배 후 대화</dd></div>
-                  <div><dt>배운 점</dt><dd>한 장의 활동지가 학업·관계·감정·진로를 구체적으로 듣는 예배 후 대화로 이어졌습니다.</dd></div>
-                </dl>
-              </div>
-              <figure class="document-preview">
-                <img src="assets/youth-body-map.png" alt="머리, 눈, 귀, 심장, 손, 발, 입과 말씀 선택을 담은 내 몸 지도 활동지" loading="lazy">
-                <figcaption>생각·관계·감정·말씀을 한 장에 담은 활동지</figcaption>
-              </figure>
-            </article>
-
-            <article class="portfolio-item">
-              <div class="happiness-gallery" aria-label="행복 카드 인쇄 디자인">
-                <figure>
-                  <img src="assets/happiness-cards-1.png" alt="숨 쉴 수 있음, 물 마실 수 있음 등 이미 주어진 행복 카드" loading="lazy">
-                  <figcaption>이미 주어진 행복 카드</figcaption>
-                </figure>
-                <figure>
-                  <img src="assets/happiness-cards-2.png" alt="폰, 게임, 성적, 돈 등 내가 얻고 싶은 행복 카드" loading="lazy">
-                  <figcaption>내가 만들어 내는 행복 카드</figcaption>
-                </figure>
-              </div>
-              <div class="project-copy">
-                <p class="project-label">청소년부 2부 활동 · 인쇄 디자인 · PPT 디자인</p>
-                <h3>행복 카드 생존 활동</h3>
-                <p>
-                  내가 만들어 낸 행복과 이미 내게 주어진 행복을 카드 선택과 주사위 보드게임으로 직접
-                  비교했습니다. 선택의 이유가 예배 후 대화의 접점이 되도록 질문을 남겼습니다.
-                </p>
-                <dl class="project-facts">
-                  <div><dt>말씀 주제</dt><dd>내가 만든 행복과 이미 주어진 행복</dd></div>
-                  <div><dt>직접 제작</dt><dd>인쇄용 행복 카드 2종, 팀별 카드와 게임 규칙, PPT 디자인</dd></div>
-                  <div><dt>현장 진행</dt><dd>팀별 카드 선택과 주사위 게임, 선택 이유 나눔</dd></div>
-                  <div><dt>배운 점</dt><dd>승패보다 무엇을 행복으로 여기고 왜 고르는지가 더 중요한 대화가 되었습니다.</dd></div>
+            <article class="evidence-card accent-violet">
+              <a class="evidence-visual" href="assets/worship-leading-page.png" target="_blank" rel="noopener" title="예배 인도문 크게 보기">
+                <img src="assets/worship-leading-page.png" alt="통성기도, 찬송, 성경봉독과 말씀 소개를 한 흐름으로 정리한 예배 인도문" loading="lazy">
+              </a>
+              <div class="evidence-copy">
+                <p class="evidence-type">장년 예배 · 인도</p>
+                <h3>주일저녁예배 인도문</h3>
+                <p>기도와 찬송, 성경봉독과 말씀 소개가 끊기지 않도록 예배 전체의 언어와 순서를 작성했습니다.</p>
+                <dl class="evidence-facts">
+                  <div><dt>담당</dt><dd>통성기도 · 찬송 · 봉독 · 말씀 소개</dd></div>
+                  <div><dt>자료</dt><dd>주일저녁예배 인도문</dd></div>
+                  <div><dt>활용</dt><dd>예배 진행과 순서 연결</dd></div>
                 </dl>
               </div>
             </article>
-          </div>
 
-          <div class="ppt-showcase">
-            <div class="ppt-showcase-head">
-              <h3>PPT 디자인</h3>
-              <p>활동마다 다른 시각 언어를 사용하면서도 표지, 진행, 선택, 결과와 말씀 정리가 한 흐름으로 이어지도록 제작했습니다.</p>
-            </div>
-
-            <article class="deck-row">
-              <div class="deck-copy">
-                <p class="deck-label">아동부 · 14장</p>
-                <h4>말씀으로 채색된 정원</h4>
-                <p>손그림 정원 세계관 안에서 모험길과 세 가지 미션을 진행했습니다.</p>
-              </div>
-              <div class="deck-gallery two" aria-label="말씀으로 채색된 정원 PPT 화면">
-                <figure>
-                  <img src="assets/garden-mission-map.png" alt="찬양 숲부터 축복 나무까지 이어지는 오늘의 모험길 PPT" loading="lazy">
-                  <figcaption>전체 활동을 한눈에 보여주는 모험길</figcaption>
-                </figure>
-                <figure>
-                  <img src="assets/garden-title-vote.png" alt="아이들이 그림 제목을 뽑는 첫 번째 미션 PPT" loading="lazy">
-                  <figcaption>그림 씨앗 제목 총선거</figcaption>
-                </figure>
-              </div>
-            </article>
-
-            <article class="deck-row">
-              <div class="deck-copy">
-                <p class="deck-label">청소년부 · 10장</p>
-                <h4>오늘의 상태메시지</h4>
-                <p>휴대전화 상태메시지와 말씀 DM을 연결해 자기 상태를 돌아보도록 구성했습니다.</p>
-              </div>
-              <div class="deck-gallery" aria-label="오늘의 상태메시지 PPT 화면">
-                <figure>
-                  <img src="assets/ppt-status-cover.png" alt="오늘의 상태메시지 PPT 표지" loading="lazy">
-                  <figcaption>상태메시지 활동 표지</figcaption>
-                </figure>
-                <figure>
-                  <img src="assets/ppt-status-word-dm.png" alt="불안 알림을 잠재울 말씀 스티커를 고르는 PPT" loading="lazy">
-                  <figcaption>하나님이 보내주신 말씀 DM</figcaption>
-                </figure>
-                <figure>
-                  <img src="assets/ppt-status-closing.png" alt="주신 말씀을 간직하는 상태메시지 활동 마무리 PPT" loading="lazy">
-                  <figcaption>말씀을 일상에서 기억하는 마무리</figcaption>
-                </figure>
-              </div>
-            </article>
-
-            <article class="deck-row">
-              <div class="deck-copy">
-                <p class="deck-label">청소년부 · 23장</p>
-                <h4>김선택의 하루</h4>
-                <p>등교부터 하루 마무리까지 선택과 결과가 갈리는 시뮬레이션 뒤에 선택을 함께 돌아봤습니다.</p>
-              </div>
-              <div class="deck-gallery" aria-label="김선택의 하루 선택 시뮬레이션 PPT 화면">
-                <figure>
-                  <img src="assets/ppt-choice-round.png" alt="등교 상황에서 두 행동 중 하나를 고르는 PPT" loading="lazy">
-                  <figcaption>하루의 갈림길을 고르는 화면</figcaption>
-                </figure>
-                <figure>
-                  <img src="assets/ppt-choice-debrief.png" alt="멈추기, 인정하기, 돌아가기를 정리한 PPT" loading="lazy">
-                  <figcaption>선택을 돌아보는 세 단계</figcaption>
-                </figure>
-                <figure class="crop-right">
-                  <img src="assets/ppt-choice-turning-point.png" alt="작은 선택이 길을 바꾸는 분기점 PPT" loading="lazy">
-                  <figcaption>작은 선택이 만든 분기점</figcaption>
-                </figure>
+            <article class="evidence-card accent-mustard">
+              <a class="evidence-visual" href="assets/friday-praise-setlist-page.png" target="_blank" rel="noopener" title="금요철야 찬양 콘티 크게 보기">
+                <img src="assets/friday-praise-setlist-page.png" alt="선곡, 키, BPM과 기도 연결을 정리한 금요철야 찬양 콘티" loading="lazy">
+              </a>
+              <div class="evidence-copy">
+                <p class="evidence-type">금요철야 · 찬양인도</p>
+                <h3>금요철야 찬양 콘티</h3>
+                <p>감사의 고백에서 빠른 찬양의 고조를 지나 느린 찬양과 통성기도로 이어지는 흐름을 준비했습니다.</p>
+                <dl class="evidence-facts">
+                  <div><dt>담당</dt><dd>선곡 · 키 · BPM · 진행 순서</dd></div>
+                  <div><dt>자료</dt><dd>2026.06.26 최종 콘티 6곡</dd></div>
+                  <div><dt>활용</dt><dd>찬양인도와 기도 연결</dd></div>
+                </dl>
               </div>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section system-section" id="portfolio">
+      <section class="section alt evidence-section" id="projects">
         <div class="wrap">
           <div class="section-head">
             <div>
-              <p class="section-label">사역 포트폴리오 · 자동화와 자료 관리</p>
-              <h2>자동화로 행정의 반복을 줄여<br>말씀과 영혼 돌봄에 집중했습니다</h2>
+              <p class="section-label">다음세대 교육 설계</p>
+              <h2>말씀을 보고, 질문하고,<br>자기 삶으로 표현하게 했습니다</h2>
             </div>
             <p class="section-intro">
-              자동화의 목적은 반복 행정을 간소화하여 말씀과 영혼 돌봄에 집중할 시간을 지키는 데 있었습니다.
-              설교 원고와 녹취, PPT와 활동지, 선곡과 콘티, 주보와 보고서를 수집·변환·분류·대조·보고·갱신하는
-              흐름으로 연결했습니다. 이 과정에서 남은 기록으로 아이들의 말과 반응, 필요한 말씀과 기도 제목을
-              꼼꼼히 살폈고, 행정에 쓰이던 시간을 줄여 기도하고 말씀을 준비하며 한 영혼을 돌보는 데 더 집중할 수 있었습니다.
+              아동부 인쇄물, 청소년부 활동지, PPT 디자인을 하나씩 선정했습니다. 말씀의 주제가 시각자료와
+              질문, 예배 후 활동과 후속 대화까지 이어지도록 직접 설계하고 제작했습니다.
             </p>
           </div>
 
-          <div class="system-overview" aria-label="자동화가 말씀과 영혼 돌봄으로 이어지는 네 단계">
-            <div class="system-node node-forest">
-              <strong>반복 행정</strong>
-              <span>설교 · 활동 · 찬양 · 보고</span>
+          <div class="evidence-grid">
+            <article class="evidence-card accent-forest">
+              <a class="evidence-visual" href="assets/garden-board.png" target="_blank" rel="noopener" title="말씀으로 채색된 정원 크게 보기">
+                <img src="assets/garden-board.png" alt="함께 예배한 시간을 축복으로 물들이는 말씀으로 채색된 정원 A3 활동판" loading="lazy">
+              </a>
+              <div class="evidence-copy">
+                <p class="evidence-type">아동부 · A3 인쇄물</p>
+                <h3>말씀으로 채색된 정원</h3>
+                <p>세 가지 미션과 축복 스티커를 거쳐 모두가 함께 정원판을 완성하도록 구성했습니다.</p>
+                <dl class="evidence-facts">
+                  <div><dt>담당</dt><dd>기획 · PPT · 정원판 · 스티커</dd></div>
+                  <div><dt>자료</dt><dd>14장 PPT와 A3 활동판</dd></div>
+                  <div><dt>활용</dt><dd>환송과 새친구 초청 활동</dd></div>
+                </dl>
+              </div>
+            </article>
+
+            <article class="evidence-card accent-violet">
+              <a class="evidence-visual" href="assets/youth-body-map.png" target="_blank" rel="noopener" title="내 몸 지도 활동지 크게 보기">
+                <img src="assets/youth-body-map.png" alt="생각, 시선, 들은 말, 감정과 생활을 적는 청소년부 내 몸 지도 활동지" loading="lazy">
+              </a>
+              <div class="evidence-copy">
+                <p class="evidence-type">청소년부 · 활동지</p>
+                <h3>내 몸 지도 그려보기</h3>
+                <p>학생의 생각과 관계, 감정, 학업과 진로를 9개 질문과 말씀 선택, 한 주의 작은 실천으로 연결했습니다.</p>
+                <dl class="evidence-facts">
+                  <div><dt>담당</dt><dd>질문 설계 · 인쇄 디자인</dd></div>
+                  <div><dt>자료</dt><dd>9개 질문을 담은 활동지</dd></div>
+                  <div><dt>활용</dt><dd>개인 작성과 예배 후 대화</dd></div>
+                </dl>
+              </div>
+            </article>
+
+            <article class="evidence-card accent-coral is-wide">
+              <a class="evidence-visual" href="assets/ppt-status-cover.png" target="_blank" rel="noopener" title="오늘의 상태메시지 PPT 크게 보기">
+                <img src="assets/ppt-status-cover.png" alt="휴대전화 상태메시지 화면을 활용한 청소년부 2부 활동 PPT 표지" loading="lazy">
+              </a>
+              <div class="evidence-copy">
+                <p class="evidence-type">청소년부 · PPT 디자인</p>
+                <h3>오늘의 상태메시지</h3>
+                <p>휴대전화 상태메시지와 말씀 DM을 시각 언어로 삼아 현재의 마음을 표현하고 말씀을 선택하도록 구성했습니다.</p>
+                <dl class="evidence-facts">
+                  <div><dt>담당</dt><dd>기획 · 질문 · 10장 PPT</dd></div>
+                  <div><dt>자료</dt><dd>상태메시지 활동 화면</dd></div>
+                  <div><dt>활용</dt><dd>자기 표현과 말씀 선택</dd></div>
+                </dl>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section system-section evidence-section" id="portfolio">
+        <div class="wrap">
+          <div class="section-head">
+            <div>
+              <p class="section-label">교회 운영과 자동화</p>
+              <h2>반복되는 행정을 정리해<br>말씀과 사람을 살필 시간을 만들었습니다</h2>
             </div>
-            <div class="system-arrow" aria-hidden="true">→</div>
-            <div class="system-node node-teal">
-              <strong>자동화</strong>
-              <span>수집 · 변환 · 분류 · 대조 · 보고 · 갱신</span>
-            </div>
-            <div class="system-arrow" aria-hidden="true">→</div>
-            <div class="system-node node-coral">
-              <strong>돌봄을 위한 기록</strong>
-              <span>말씀 · 반응 · 기도 제목</span>
-            </div>
-            <div class="system-arrow" aria-hidden="true">→</div>
-            <div class="system-node node-violet">
-              <strong>말씀과 영혼 돌봄</strong>
-              <span>기도 · 말씀 준비 · 후속 돌봄</span>
-            </div>
+            <p class="section-intro">
+              주보의 본문과 찬송, 예배 순서와 일정을 대조하고, 방송 상태와 후속 연락을 보고했습니다.
+              설교·주보·찬양·주간관리 자료는 다음 말씀과 예배, 돌봄을 준비하는 흐름으로 이어 왔습니다.
+            </p>
           </div>
 
-          <div class="system-lanes">
-            <article class="system-lane">
-              <h3>말씀 사역 현장에서</h3>
-              <p>설교 원고와 녹취를 본문·날짜·주제별로 모아, 이전 설교와 예화, 핵심 문장을 다시 찾을 수 있는 말씀 자료 체계를 만들었습니다.</p>
+          <div class="evidence-grid">
+            <article class="evidence-card accent-teal">
+              <a class="evidence-visual" href="assets/bulletin-page.png" target="_blank" rel="noopener" title="주보 한 면 크게 보기">
+                <img src="assets/bulletin-page.png" alt="예배 시간표와 주일낮예배 순서, 교회 소식과 대조 항목을 정리한 주보 한 면" loading="lazy">
+              </a>
+              <div class="evidence-copy">
+                <p class="evidence-type">예배 행정 · 주보</p>
+                <h3>주보 제작</h3>
+                <p>본문과 찬송, 성시교독, 예배위원, 날짜와 교회 소식을 대조해 성도들이 필요한 내용을 빠르게 찾도록 정리했습니다.</p>
+                <dl class="evidence-facts">
+                  <div><dt>담당</dt><dd>내용 정리 · 대조 · 일정 연결</dd></div>
+                  <div><dt>자료</dt><dd>예배 시간과 순서 한 면</dd></div>
+                  <div><dt>활용</dt><dd>주일예배와 주간 일정 안내</dd></div>
+                </dl>
+              </div>
             </article>
-            <article class="system-lane">
-              <h3>다음세대 사역에서</h3>
-              <p>PPT와 활동지, 2부 활동과 운영 기록을 연령·주차·말씀별로 묶어, 다음 활동과 후속 대화를 함께 준비했습니다.</p>
+
+            <article class="evidence-card accent-coral">
+              <a class="evidence-visual" href="assets/broadcast-report-page.png" target="_blank" rel="noopener" title="방송 모니터 보고 한 면 크게 보기">
+                <img src="assets/broadcast-report-page.png" alt="영상과 라디오 송출 상태, 후속 연락을 정리한 방송 모니터 보고서" loading="lazy">
+              </a>
+              <div class="evidence-copy">
+                <p class="evidence-type">주간 행정 · 보고</p>
+                <h3>방송·통화 보고</h3>
+                <p>영상과 라디오의 시작·마감 시간, 설교와 칼럼 제목, 정상 송출 여부와 문의 처리를 매주 확인했습니다.</p>
+                <dl class="evidence-facts">
+                  <div><dt>담당</dt><dd>방송 확인 · 기록 · 후속 연락</dd></div>
+                  <div><dt>자료</dt><dd>주간 방송 모니터 보고</dd></div>
+                  <div><dt>활용</dt><dd>송출 점검과 문의 처리</dd></div>
+                </dl>
+              </div>
             </article>
-            <article class="system-lane">
-              <h3>예배·찬양 사역에서</h3>
-              <p>선곡과 콘티, 가사와 예배 자료를 곡·본문·인도 날짜별로 기록해, 이전 예배의 흐름을 살펴 다음 선곡을 준비했습니다.</p>
-            </article>
-            <article class="system-lane">
-              <h3>행정 사역 현장에서</h3>
-              <p>주보와 보고서, 일정과 후속 연락을 템플릿·체크 항목·자동화로 연결해 반복 확인과 누락을 줄이고, 기도와 말씀 준비, 한 영혼을 돌보는 데 더 많은 시간을 쓸 수 있었습니다.</p>
+
+            <article class="evidence-card accent-violet">
+              <a class="evidence-visual" href="assets/ministry-system-page.png" target="_blank" rel="noopener" title="자료관리 흐름 크게 보기">
+                <img src="assets/ministry-system-page.png" alt="설교, 예배, 찬양과 주간 운영 자료가 다음 사역으로 이어지는 관리 흐름" loading="lazy">
+              </a>
+              <div class="evidence-copy">
+                <p class="evidence-type">자료 관리 · 자동화</p>
+                <h3>다음 사역으로 이어지는 자료</h3>
+                <p>원고와 녹취, 주보와 콘티, 일정과 보고를 분류·대조·검색·갱신하는 흐름으로 연결했습니다.</p>
+                <dl class="evidence-facts">
+                  <div><dt>담당</dt><dd>수집 · 분류 · 대조 · 검색 · 갱신</dd></div>
+                  <div><dt>자료</dt><dd>말씀·예배·찬양·주간관리</dd></div>
+                  <div><dt>활용</dt><dd>기도 · 말씀 준비 · 후속 돌봄</dd></div>
+                </dl>
+              </div>
             </article>
           </div>
         </div>
